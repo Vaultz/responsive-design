@@ -1,21 +1,21 @@
 // sass --watch assets/scss/index.scss:assets/css/index.css
 
 body {
-  width:100%;
+  margin:0;
 }
 
 header {
   display: flex;
   justify-content: space-between;
 
-
-  label {
-
-  }
-
   img {
     max-height: 30px;
     max-width: 300px;
+  }
+
+  button {
+    background:none;
+    border:none;
   }
 
   div {
@@ -28,59 +28,19 @@ header {
       font-weight: bold;
     }
   }
-
-
 }
 
-
-// .menu-toggler__label {
-//     position: relative;
-//     width: 35px;
-// }
-//
-//
-// .menu-toggler__label__visual {
-//
-//   span {
-//     position: absolute;
-//     width: 100%;
-//     height: 6px;
-//     background-color: #000;
-//     transition: transform .5s, top .5s, bottom .5s, opacity .2s;
-//     opacity: 1;
-//   }
-//
-//   span:nth-child(1){}
-//
-//   span:nth-child(2) {
-//     top: 9px;
-//   }
-//
-//   span:nth-child(3) {
-//     top:18px;
-//   }
-//
-// }
 
 section {
   picture {
 
-    source {
-    }
+
 
     img {
       position: absolute;
       z-index: 0;
       width:100%;
-
-    }
-
-    .home_desktop {
-
-    }
-
-    .home_mobile {
-
+      height: 100%;
     }
 
   }
@@ -88,16 +48,116 @@ section {
   .polygonbox {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+
+    svg {
+      transform: rotate(90deg);
+    }
+
+
   }
 
-  .polygons {
-    z-index:1 ;
 
+
+
+  .polygons {
+    z-index:1;
+    width:43%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      position:absolute;
+      text-decoration: none;
+      color:white;
+      font-weight: bold;
+      width: 70%;
+      text-align: center;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 20px;
+        display:none;
+      }
+    }
+
+    path {
+      stroke:rgb(255, 255, 255);
+      stroke-width:2.031px;
+      stroke-linecap:butt;
+      stroke-linejoin:miter;
+      fill-opacity:0.251;
+      fill:rgb(41, 41, 41);
+      transition:.3s;
+
+    }
+  }
+
+  .polygon1 {
+    transform: translate(6%, 6%);
+
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #f4887e;
+    }
+
+  }
+
+  .polygon2 {
+    transform: translate(-7%, 49%);
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #98c67f;
+    }
+  }
+
+  .polygon3 {
+    transform: translate(6%, -8%);
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #5a8fa6;
+    }
+  }
+
+  .polygon4 {
+    transform: translate(-8%, 35%);
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #fcc04b;
+    }
   }
 }
 
 .show_on_mobile {
   display:none;
+}
+
+footer {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom:0;
+  padding: 2%;
+  background-color: #000;
+  text-align: center;
 }
 
 
