@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/global.css">
 
     <title>AXA - Réinventons notre métier</title>
   </head>
   <body>
 
     <header>
-      <label for="menu-toggler" class="show_on_mobile menu-toggler__label" aria-hidden="true">
-        <!-- <span class="menu-toggler__label__text"></span> -->
+      <!-- <label for="menu-toggler" class="show_on_mobile menu-toggler__label" aria-hidden="true">
         <span class="menu-toggler__label__visual">
           <span></span>
           <span></span>
           <span></span>
         </span>
-      </label>
+      </label>       -->
+      <img class="show_on_mobile" src="assets/images/burger_menu.png" alt="Menu burger">
       <img src="assets/images/logo_axa.jpg" alt="Logo AXA">
       <div>
         <span class="hide_on_mobile">regards sur
@@ -30,7 +30,7 @@
 
     <section>
       <picture>
-        <source srcset="assets/images/image_home.jpg" media="(min-width: 550px)">
+        <source srcset="assets/images/image_home.jpg" media="(min-width: 600px)">
         <img class="home_desktop" src="assets/images/image_home_mobile.png" alt="Image d'accueil grande taille">
       </picture>
 
@@ -38,25 +38,48 @@
 
       <article class="polygonbox">
 
-        <a href="#">
-          <img class="polygons" src="assets/images/polygon.svg" alt="Polygone">
-          <span>mot du président</span>
-        </a>
+        <svg
+           class="polygons"
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           width="323.046px" height="280.046px">
+          <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2.031px" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0.251" fill="rgb(41, 41, 41)"
+           d="M81.156,278.021 L1.024,139.677 L80.885,1.177 L240.877,1.021 L321.009,139.365 L241.148,277.865 L81.156,278.021 Z"/>
+      </svg>
 
-        <a href="#">
-          <img class="polygons" src="assets/images/polygon.svg" alt="Polygone">
-          <span>engagés pour mieux protéger</span>
-        </a>
+        <svg
+           class="polygons"
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           width="323.046px" height="280.046px">
+          <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2.031px" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0.251" fill="rgb(41, 41, 41)"
+           d="M81.156,278.021 L1.024,139.677 L80.885,1.177 L240.877,1.021 L321.009,139.365 L241.148,277.865 L81.156,278.021 Z"/>
+      </svg>
 
-        <a href="#">
-          <img class="polygons" src="assets/images/polygon.svg" alt="Polygone">
-          <span>stratégie AmbitionAxa</span>
-        </a>
+        <svg
+           class="polygons"
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           width="323.046px" height="280.046px">
+          <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2.031px" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0.251" fill="rgb(41, 41, 41)"
+           d="M81.156,278.021 L1.024,139.677 L80.885,1.177 L240.877,1.021 L321.009,139.365 L241.148,277.865 L81.156,278.021 Z"/>
+      </svg>
 
-        <a href="#">
-          <img class="polygons" src="assets/images/polygon.svg" alt="Polygone">
-          <span>chiffres clés</span>
-        </a>
+        <svg
+           class="polygons"
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           width="323.046px" height="280.046px">
+          <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2.031px" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0.251" fill="rgb(41, 41, 41)"
+           d="M81.156,278.021 L1.024,139.677 L80.885,1.177 L240.877,1.021 L321.009,139.365 L241.148,277.865 L81.156,278.021 Z"/>
+      </svg>
+
+
+        <span>mot du président</span>
+        <span>engagés pour mieux protéger</span>
+        <span>stratégie AmbitionAxa</span>
+        <span>chiffres clés</span>
+
       </article>
 
 
@@ -64,7 +87,7 @@
     </section>
 
     <footer>
-      <img src="assets/images/logo_share.png" alt="Sharing Logo">
+      <img class="sharing" src="assets/images/logo_share.png" alt="Sharing Logo">
     </footer>
 
   </body>
