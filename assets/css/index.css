@@ -1,5 +1,5 @@
 body {
-  width: 100%; }
+  margin: 0; }
 
 header {
   display: flex;
@@ -7,6 +7,9 @@ header {
   header img {
     max-height: 30px;
     max-width: 300px; }
+  header button {
+    background: none;
+    border: none; }
   header div :first-child {
     white-space: pre-line; }
   header div .year {
@@ -16,15 +19,44 @@ header {
 section picture img {
   position: absolute;
   z-index: 0;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 section .polygonbox {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center; }
+  section .polygonbox svg {
+    transform: rotate(90deg); }
+section .polygon1 {
+  transform: translate(6%, 6%); }
+section .polygon2 {
+  transform: translate(-8%, 48%); }
+section .polygon3 {
+  transform: translate(6%, -10%); }
+section .polygon4 {
+  transform: translate(-8%, 32%); }
 section .polygons {
-  z-index: 1; }
+  z-index: 1;
+  width: 43%; }
+  section .polygons path {
+    stroke: white;
+    stroke-width: 2.031px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    fill-opacity: 0.251;
+    fill: #292929; }
 
 .show_on_mobile {
   display: none; }
+
+footer {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  padding: 2%;
+  background-color: #000;
+  text-align: center; }
 
 @media screen and (max-width: 600px) {
   .show_on_mobile {
