@@ -8,11 +8,6 @@ header {
   display: flex;
   justify-content: space-between;
 
-
-  label {
-
-  }
-
   img {
     max-height: 30px;
     max-width: 300px;
@@ -39,8 +34,7 @@ header {
 section {
   picture {
 
-    source {
-    }
+
 
     img {
       position: absolute;
@@ -63,24 +57,35 @@ section {
 
   }
 
-  .polygon1 {
-    transform: translate(6%, 6%);
-  }
-  .polygon2 {
-    transform: translate(-8%, 48%);
-  }
-  .polygon3 {
-    transform: translate(6%, -10%);
-  }
-  .polygon4 {
-    transform: translate(-8%, 32%);
-  }
 
 
 
   .polygons {
-    z-index:1 ;
+    z-index:1;
     width:43%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      position:absolute;
+      text-decoration: none;
+      color:white;
+      font-weight: bold;
+      width: 70%;
+      text-align: center;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 20px;
+        display:none;
+      }
+    }
 
     path {
       stroke:rgb(255, 255, 255);
@@ -89,8 +94,54 @@ section {
       stroke-linejoin:miter;
       fill-opacity:0.251;
       fill:rgb(41, 41, 41);
+      transition:.3s;
 
+    }
+  }
 
+  .polygon1 {
+    transform: translate(6%, 6%);
+
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #f4887e;
+    }
+
+  }
+
+  .polygon2 {
+    transform: translate(-7%, 49%);
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #98c67f;
+    }
+  }
+
+  .polygon3 {
+    transform: translate(6%, -8%);
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #5a8fa6;
+    }
+  }
+
+  .polygon4 {
+    transform: translate(-8%, 35%);
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #fcc04b;
     }
   }
 }
