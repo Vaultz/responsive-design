@@ -1,0 +1,144 @@
+body{
+  font-family: arial;
+  background: #E6E6E6;
+  margin: 0px;
+  font-size: 14px;
+}
+
+main{
+  max-width: 550px;
+  margin: auto;
+}
+
+h1{
+  font-size: 40px;
+}
+
+.subcategory__1 {
+    h2{
+      border-bottom: solid 1px rgb(231, 150, 85);
+      font-size: 16px;
+    }
+    .subtitle{
+      margin: 0;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    ul{
+      width: 100%;
+      list-style-type: none;
+      padding-left: 0px;
+      font-size: 14px;
+    }
+}
+
+.drop-menu{
+
+  padding: 0;
+
+  li{
+    background-color: white;
+    margin-bottom: 2px;
+    align-items: center;
+  }
+
+  .weight{
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .menu{
+    margin: 0px;
+    margin-left: 10px;
+    flex-grow: 1;
+    max-width: 200px;
+  }
+
+  label{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .select{
+    position: relative;
+  }
+
+  .polygone, .polygone-drop-down{
+    opacity: 0.39;
+  }
+  .bar {
+    position: absolute;
+    top: 17.5px;
+    left: 9px;
+  }
+
+  .arrow{
+    display:none;
+  }
+
+  .checkbox_toggler:checked .chevron{
+    display: none;
+  }
+
+  .checkbox_toggler:checked ~ label .polygone {
+    opacity: 1;
+  }
+
+  .checkbox_toggler:checked ~ label .chevron-down {
+    //top: 0;
+  	transform: rotate(90deg);
+  }
+  .checkbox_toggler:checked ~ label .arrow {
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: 6px;
+  }
+  .checkbox_toggler{
+      display: none;
+  }
+}
+
+.sub-menu{
+  display: none;
+  background: #E6E6E6;
+}
+
+.sub-menu, .sub-menu ul, .sub-menu li{
+  background: #E6E6E6;
+}
+
+.checkbox_toggler:checked ~ .sub-menu{
+  display: block;
+  padding-left: 30px;
+}
+
+//CHEVRON
+//CHEVRON
+.chevron{
+  padding-left: 10px;
+}
+.chevron::before {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+  border-color: rgb(231, 150, 85);
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 0.45em;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+	top: 0;
+	transform: rotate(135deg);
+}
