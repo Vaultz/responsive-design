@@ -68,6 +68,7 @@ h2{
     background-color: white;
     margin-bottom: 2px;
     align-items: center;
+    list-style: none;
   }
 
   .weight{
@@ -76,7 +77,7 @@ h2{
   }
 
   .menu{
-    margin: 0px;
+    //margin: 0px;
     margin-left: 10px;
     flex-grow: 1;
     //max-width: 200px;
@@ -113,6 +114,9 @@ h2{
 
   .arrow-drop-down{
     display:none;
+    position: absolute;
+    top: 13px;
+    left: 6px;
   }
 
   .checkbox_toggler:checked .chevron{
@@ -210,17 +214,33 @@ h2{
         justify-content: center;
       }
       figcaption{
-          width: 160px;
+          width: 180px;
       }
+
+      figcaption p:first-child{
+        color: rgb(231, 150, 85);
+        margin: 0;
+      }
+
+      figcaption p:nth-child(2){
+        margin: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+
+    img{
+      margin: auto;
     }
 }
 
 .subcategory__3{
     .drop-menu__content{
-      margin-right: 10px;
+      //margin-right: 10px;
       display: flex;
       align-items: center;
       width: 100%;
+      vertical-align: middle;
   }
 }
 
@@ -228,6 +248,8 @@ h2{
   background-color: transparent;
   border: 0;
   padding: 0px;
+  text-align: left;
+  font-size: 14px;
 }
 
 button, label{

@@ -48,12 +48,12 @@ h2 {
   .drop-menu li {
     background-color: white;
     margin-bottom: 2px;
-    align-items: center; }
+    align-items: center;
+    list-style: none; }
   .drop-menu .weight {
     margin-left: auto;
     margin-right: 10px; }
   .drop-menu .menu {
-    margin: 0px;
     margin-left: 10px;
     flex-grow: 1; }
   .drop-menu label {
@@ -76,7 +76,10 @@ h2 {
   .drop-menu .arrow {
     display: none; }
   .drop-menu .arrow-drop-down {
-    display: none; }
+    display: none;
+    position: absolute;
+    top: 13px;
+    left: 6px; }
   .drop-menu .checkbox_toggler:checked .chevron {
     display: none; }
   .drop-menu .checkbox_toggler:checked ~ label .polygone {
@@ -145,18 +148,29 @@ h2 {
     margin: auto;
     justify-content: center; }
   .subcategory__2 .ad figcaption {
-    width: 160px; }
+    width: 180px; }
+  .subcategory__2 .ad figcaption p:first-child {
+    color: #e79655;
+    margin: 0; }
+  .subcategory__2 .ad figcaption p:nth-child(2) {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+.subcategory__2 img {
+  margin: auto; }
 
 .subcategory__3 .drop-menu__content {
-  margin-right: 10px;
   display: flex;
   align-items: center;
-  width: 100%; }
+  width: 100%;
+  vertical-align: middle; }
 
 .button_dl {
   background-color: transparent;
   border: 0;
-  padding: 0px; }
+  padding: 0px;
+  text-align: left;
+  font-size: 14px; }
 
 button, label {
   cursor: pointer; }

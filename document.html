@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="assets/css/document.css">
         <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+        <script type="text/javascript" src="assets/js/document.js"></script>
     </head>
 
     <body>
@@ -32,7 +33,7 @@
           <h2>Rapport personnalisé</h2>
           <p class="subtitle">télécharger ci-dessous le document personnalisé à partir de l'édition papier du <strong>rapport d'activité et de responsabilité d'entreprise 2014.</strong></p>
 
-          <form>
+          <form name="dl">
 
             <ul class="drop-menu">
               <li>
@@ -80,15 +81,15 @@
                   <p class="menu">Notre groupe</p>
                   <p class="weight">1,6Mo</p>
                   <span class="select">
-                    <svg class="polygone-drop-down" width="33px" height="40px">
+                    <svg id="polygone-drop-down" class="polygone-drop-down" width="33px" height="40px">
                         <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
                        d="M30.998,28.896 L16.017,37.912 L1.019,28.927 L1.002,10.924 L15.983,1.908 L30.981,10.894 L30.998,28.896 Z"/>
                     </svg>
-                    <svg class="bar" width="14px" height="4px">
+                    <svg id="bar-drop-down" class="bar" width="14px" height="4px">
                       <path fill-rule="evenodd"  opacity="0.349" fill="rgb(231, 150, 85)"
                      d="M0.000,0.928 L14.000,0.928 L14.000,3.928 L0.000,3.928 L0.000,0.928 Z"/>
                     </svg>
-                    <svg class="arrow-drop-down" width="21px" height="15px">
+                    <svg id="arrow-drop-down" class="arrow-drop-down" width="21px" height="15px">
                       <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                        d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                     </svg>
@@ -96,7 +97,7 @@
                 </label>
                 <ul class="sub-menu">
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu1" class="checkbox_toggler">
+                    <input type="checkbox" id="sub-menu__drop-menu1" class="checkbox_toggler" onClick="Checked()">
                     <label for="sub-menu__drop-menu1">
                       <p class="sub-menu__menu">Notre métier</p>
                       <p class="weight sub-menu__weight">246Ko</p>
@@ -113,7 +114,7 @@
                     </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu2" class="checkbox_toggler">
+                    <input type="checkbox" id="sub-menu__drop-menu2" class="checkbox_toggler" onClick="Checked()">
                     <label for="sub-menu__drop-menu2">
                       <p class="sub-menu__menu">Profil</p>
                       <p class="weight sub-menu__weight">176Ko</p>
@@ -130,7 +131,7 @@
                     </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu3" class="checkbox_toggler">
+                    <input type="checkbox" id="sub-menu__drop-menu3" class="checkbox_toggler" onClick="Checked()">
                     <label for="sub-menu__drop-menu3">
                       <p class="sub-menu__menu">Faits marquants</p>
                       <p class="weight sub-menu__weight">708Ko</p>
@@ -147,7 +148,7 @@
                     </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu4" class="checkbox_toggler">
+                    <input type="checkbox" id="sub-menu__drop-menu4" class="checkbox_toggler" onClick="Checked()">
                     <label for="sub-menu__drop-menu4">
                       <p class="sub-menu__menu">Résultats</p>
                       <p class="weight sub-menu__weight">315Ko</p>
@@ -164,7 +165,7 @@
                     </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu5" class="checkbox_toggler">
+                    <input type="checkbox" id="sub-menu__drop-menu5" class="checkbox_toggler" onClick="Checked()">
                     <label for="sub-menu__drop-menu5">
                       <p class="sub-menu__menu">Gouvernance</p>
                       <p class="weight sub-menu__weight">415Ko</p>
@@ -253,89 +254,92 @@
         <section class="subcategory__2">
           <h2>Publication complètes</h2>
           <div class="ad">
-            <figure class="ad_block">
-              <img src="assets/images/pub1.png">
-              <figcaption>
-                <p>télécharger<br> le rapport d'activité</p>
-                <button class="button_dl">
+            <button class="button_dl">
+              <figure>
+                <img src="assets/images/pub1.png">
+                <figcaption>
+                  <p>télécharger<br> le rapport d'activité</p>
+                  <p>17.6Mo</p>
                   <svg width="30px" height="36px">
                     <image  x="0px" y="0px" width="30px" height="36px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAMAAACpD3pbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA+VBMVEXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllX///+SDkBYAAAAUXRSTlMAJLaxIgmC+PZ/Tt/+nqLcTLTOOj3RsyOA720Ebt2gFxihIbLQPM9+b4FK26MZ3k/SPjuSY3DK1+36YooCr0DUTaRH8XwGsB/wcQjTP0ulfSD92fH0AAAAAWJLR0RSDWAtkAAAAAd0SU1FB+EEDAocKQfIOxgAAAE9SURBVDjL3ZPpVsIwEIVTAa0YpUWxQG2RAqLUKhXKjvuK633/lzEBpG1IX8D7K3O+nNyZkzuERKVspNIkSZnNLUDdzshpdgd0d48ip0mgogP5fUIOCsChIb5bVFEqm/xoHpWgFmMOmgVqV/6q4yqFlV1BpwbUG9HrjRNAVxbvNtm7p2bczCwzhzPm0HJBz731Vis2xcUlAdq+fNCrPMCwSRJkznFYd8DUCWsB2xzb/w53gx7HvaArxX0s1ZdiY7CgA0Pu7Q85Hfpyb0JGHI8SOydjYEwEHPnQyXQ6ET80HrNQ1zcM37KQViVh8u4o3PtlxNeiGDxAfXyan9MsyIVY4Pw28PyyKrVcNK4eWzS3Fb3Ow/76Fi5Rcya04qSA9w8W3zpQcySDfLKF+GLhtzT5oLNvFeJyxvQz1eOr/Qvgc1EBQ9xScQAAAABJRU5ErkJggg==" />
                   </svg>
-                </button>
-              </figcaption>
-            </figure>
-            <figure class="ad_block">
-              <img src="assets/images/pub1.png">
-              <figcaption>
-                <p>Télécharger<br> le document de référence</p>
-                <button class="button_dl">
+                </figcaption>
+              </figure>
+            </button>
+
+            <button class="button_dl">
+              <figure>
+                <img src="assets/images/pub1.png">
+                <figcaption>
+                  <p>Télécharger<br> le document de référence</p>
+                  <p>24.9Mo</p>
                   <svg width="30px" height="36px">
                     <image  x="0px" y="0px" width="30px" height="36px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAMAAACpD3pbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA+VBMVEXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllX///+SDkBYAAAAUXRSTlMAJLaxIgmC+PZ/Tt/+nqLcTLTOOj3RsyOA720Ebt2gFxihIbLQPM9+b4FK26MZ3k/SPjuSY3DK1+36YooCr0DUTaRH8XwGsB/wcQjTP0ulfSD92fH0AAAAAWJLR0RSDWAtkAAAAAd0SU1FB+EEDAocKQfIOxgAAAE9SURBVDjL3ZPpVsIwEIVTAa0YpUWxQG2RAqLUKhXKjvuK633/lzEBpG1IX8D7K3O+nNyZkzuERKVspNIkSZnNLUDdzshpdgd0d48ip0mgogP5fUIOCsChIb5bVFEqm/xoHpWgFmMOmgVqV/6q4yqFlV1BpwbUG9HrjRNAVxbvNtm7p2bczCwzhzPm0HJBz731Vis2xcUlAdq+fNCrPMCwSRJkznFYd8DUCWsB2xzb/w53gx7HvaArxX0s1ZdiY7CgA0Pu7Q85Hfpyb0JGHI8SOydjYEwEHPnQyXQ6ET80HrNQ1zcM37KQViVh8u4o3PtlxNeiGDxAfXyan9MsyIVY4Pw28PyyKrVcNK4eWzS3Fb3Ow/76Fi5Rcya04qSA9w8W3zpQcySDfLKF+GLhtzT5oLNvFeJyxvQz1eOr/Qvgc1EBQ9xScQAAAABJRU5ErkJggg==" />
                   </svg>
-                </button>
-              </figcaption>
-            </figure>
+                </figcaption>
+              </figure>
+            </button>
           </div>
         </section>
 
         <section class="subcategory__3">
           <h2>Autres documents</h2>
           <ul class="drop-menu">
-            <li class="drop-menu__content">
-              <p class="menu">Longévité, cahier d'AXA n°1</p>
-              <p class="weight">703Ko</p>
-              <span class="select">
-                <button class="button_dl">
+            <li>
+              <button class="drop-menu__content button_dl">
+                <p class="menu">Longévité, cahier d'AXA n°1</p>
+                <p class="weight">703Ko</p>
+                <span class="select">
                   <svg width="30px" height="36px">
                     <image  x="0px" y="0px" width="30px" height="36px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAMAAACpD3pbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA+VBMVEXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllX///+SDkBYAAAAUXRSTlMAJLaxIgmC+PZ/Tt/+nqLcTLTOOj3RsyOA720Ebt2gFxihIbLQPM9+b4FK26MZ3k/SPjuSY3DK1+36YooCr0DUTaRH8XwGsB/wcQjTP0ulfSD92fH0AAAAAWJLR0RSDWAtkAAAAAd0SU1FB+EEDAocKQfIOxgAAAE9SURBVDjL3ZPpVsIwEIVTAa0YpUWxQG2RAqLUKhXKjvuK633/lzEBpG1IX8D7K3O+nNyZkzuERKVspNIkSZnNLUDdzshpdgd0d48ip0mgogP5fUIOCsChIb5bVFEqm/xoHpWgFmMOmgVqV/6q4yqFlV1BpwbUG9HrjRNAVxbvNtm7p2bczCwzhzPm0HJBz731Vis2xcUlAdq+fNCrPMCwSRJkznFYd8DUCWsB2xzb/w53gx7HvaArxX0s1ZdiY7CgA0Pu7Q85Hfpyb0JGHI8SOydjYEwEHPnQyXQ6ET80HrNQ1zcM37KQViVh8u4o3PtlxNeiGDxAfXyan9MsyIVY4Pw28PyyKrVcNK4eWzS3Fb3Ow/76Fi5Rcya04qSA9w8W3zpQcySDfLKF+GLhtzT5oLNvFeJyxvQz1eOr/Qvgc1EBQ9xScQAAAABJRU5ErkJggg==" />
                   </svg>
                 </button>
             </li>
-            <li class="drop-menu__content">
-              <p class="menu">Retraite, cahier d'AXA n°2</p>
-              <p class="weight">2.3Mo</p>
-              <span class="select">
-                <button class="button_dl">
+            <li>
+              <button class="drop-menu__content button_dl">
+                <p class="menu">Retraite, cahier d'AXA n°2</p>
+                <p class="weight">2.3Mo</p>
+                <span class="select">
                   <svg width="30px" height="36px">
                     <image  x="0px" y="0px" width="30px" height="36px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAMAAACpD3pbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA+VBMVEXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllX///+SDkBYAAAAUXRSTlMAJLaxIgmC+PZ/Tt/+nqLcTLTOOj3RsyOA720Ebt2gFxihIbLQPM9+b4FK26MZ3k/SPjuSY3DK1+36YooCr0DUTaRH8XwGsB/wcQjTP0ulfSD92fH0AAAAAWJLR0RSDWAtkAAAAAd0SU1FB+EEDAocKQfIOxgAAAE9SURBVDjL3ZPpVsIwEIVTAa0YpUWxQG2RAqLUKhXKjvuK633/lzEBpG1IX8D7K3O+nNyZkzuERKVspNIkSZnNLUDdzshpdgd0d48ip0mgogP5fUIOCsChIb5bVFEqm/xoHpWgFmMOmgVqV/6q4yqFlV1BpwbUG9HrjRNAVxbvNtm7p2bczCwzhzPm0HJBz731Vis2xcUlAdq+fNCrPMCwSRJkznFYd8DUCWsB2xzb/w53gx7HvaArxX0s1ZdiY7CgA0Pu7Q85Hfpyb0JGHI8SOydjYEwEHPnQyXQ6ET80HrNQ1zcM37KQViVh8u4o3PtlxNeiGDxAfXyan9MsyIVY4Pw28PyyKrVcNK4eWzS3Fb3Ow/76Fi5Rcya04qSA9w8W3zpQcySDfLKF+GLhtzT5oLNvFeJyxvQz1eOr/Qvgc1EBQ9xScQAAAABJRU5ErkJggg==" />
                   </svg>
                 </button>
             </li>
-            <li class="drop-menu__content">
-              <p class="menu">Dépendance, cahier d'AXA n°3</p>
-              <p class="weight">1.3Mo</p>
-              <span class="select">
-                <button class="button_dl">
+            <li>
+              <button class="drop-menu__content button_dl">
+                <p class="menu">Dépendance, cahier d'AXA n°3</p>
+                <p class="weight">1.3Mo</p>
+                <span class="select">
                   <svg width="30px" height="36px">
                     <image  x="0px" y="0px" width="30px" height="36px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAMAAACpD3pbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA+VBMVEXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllX///+SDkBYAAAAUXRSTlMAJLaxIgmC+PZ/Tt/+nqLcTLTOOj3RsyOA720Ebt2gFxihIbLQPM9+b4FK26MZ3k/SPjuSY3DK1+36YooCr0DUTaRH8XwGsB/wcQjTP0ulfSD92fH0AAAAAWJLR0RSDWAtkAAAAAd0SU1FB+EEDAocKQfIOxgAAAE9SURBVDjL3ZPpVsIwEIVTAa0YpUWxQG2RAqLUKhXKjvuK633/lzEBpG1IX8D7K3O+nNyZkzuERKVspNIkSZnNLUDdzshpdgd0d48ip0mgogP5fUIOCsChIb5bVFEqm/xoHpWgFmMOmgVqV/6q4yqFlV1BpwbUG9HrjRNAVxbvNtm7p2bczCwzhzPm0HJBz731Vis2xcUlAdq+fNCrPMCwSRJkznFYd8DUCWsB2xzb/w53gx7HvaArxX0s1ZdiY7CgA0Pu7Q85Hfpyb0JGHI8SOydjYEwEHPnQyXQ6ET80HrNQ1zcM37KQViVh8u4o3PtlxNeiGDxAfXyan9MsyIVY4Pw28PyyKrVcNK4eWzS3Fb3Ow/76Fi5Rcya04qSA9w8W3zpQcySDfLKF+GLhtzT5oLNvFeJyxvQz1eOr/Qvgc1EBQ9xScQAAAABJRU5ErkJggg==" />
                   </svg>
                 </button>
             </li>
-            <li class="drop-menu__content">
-              <p class="menu">Risque climatiques, cahier d'AXA n°4</p>
-              <p class="weight">1.7Mo</p>
-              <span class="select">
-                <button class="button_dl">
+            <li>
+              <button class="drop-menu__content button_dl">
+                <p class="menu">Risque climatiques, cahier d'AXA n°4</p>
+                <p class="weight">1.7Mo</p>
+                <span class="select">
                   <svg width="30px" height="36px">
                     <image  x="0px" y="0px" width="30px" height="36px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAMAAACpD3pbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA+VBMVEXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllX///+SDkBYAAAAUXRSTlMAJLaxIgmC+PZ/Tt/+nqLcTLTOOj3RsyOA720Ebt2gFxihIbLQPM9+b4FK26MZ3k/SPjuSY3DK1+36YooCr0DUTaRH8XwGsB/wcQjTP0ulfSD92fH0AAAAAWJLR0RSDWAtkAAAAAd0SU1FB+EEDAocKQfIOxgAAAE9SURBVDjL3ZPpVsIwEIVTAa0YpUWxQG2RAqLUKhXKjvuK633/lzEBpG1IX8D7K3O+nNyZkzuERKVspNIkSZnNLUDdzshpdgd0d48ip0mgogP5fUIOCsChIb5bVFEqm/xoHpWgFmMOmgVqV/6q4yqFlV1BpwbUG9HrjRNAVxbvNtm7p2bczCwzhzPm0HJBz731Vis2xcUlAdq+fNCrPMCwSRJkznFYd8DUCWsB2xzb/w53gx7HvaArxX0s1ZdiY7CgA0Pu7Q85Hfpyb0JGHI8SOydjYEwEHPnQyXQ6ET80HrNQ1zcM37KQViVh8u4o3PtlxNeiGDxAfXyan9MsyIVY4Pw28PyyKrVcNK4eWzS3Fb3Ow/76Fi5Rcya04qSA9w8W3zpQcySDfLKF+GLhtzT5oLNvFeJyxvQz1eOr/Qvgc1EBQ9xScQAAAABJRU5ErkJggg==" />
                   </svg>
                 </button>
             </li>
-            <li class="drop-menu__content">
-              <p class="menu">Rejoingnez le Cercle des actionnaires AXA</p>
-              <p class="weight">2.7Mo</p>
-              <span class="select">
-                <button class="button_dl">
+            <li>
+              <button class="drop-menu__content button_dl">
+                <p class="menu">Rejoingnez le Cercle des actionnaires AXA</p>
+                <p class="weight">2.7Mo</p>
+                <span class="select">
                   <svg width="30px" height="36px">
                     <image  x="0px" y="0px" width="30px" height="36px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAMAAACpD3pbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA+VBMVEXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllX///+SDkBYAAAAUXRSTlMAJLaxIgmC+PZ/Tt/+nqLcTLTOOj3RsyOA720Ebt2gFxihIbLQPM9+b4FK26MZ3k/SPjuSY3DK1+36YooCr0DUTaRH8XwGsB/wcQjTP0ulfSD92fH0AAAAAWJLR0RSDWAtkAAAAAd0SU1FB+EEDAocKQfIOxgAAAE9SURBVDjL3ZPpVsIwEIVTAa0YpUWxQG2RAqLUKhXKjvuK633/lzEBpG1IX8D7K3O+nNyZkzuERKVspNIkSZnNLUDdzshpdgd0d48ip0mgogP5fUIOCsChIb5bVFEqm/xoHpWgFmMOmgVqV/6q4yqFlV1BpwbUG9HrjRNAVxbvNtm7p2bczCwzhzPm0HJBz731Vis2xcUlAdq+fNCrPMCwSRJkznFYd8DUCWsB2xzb/w53gx7HvaArxX0s1ZdiY7CgA0Pu7Q85Hfpyb0JGHI8SOydjYEwEHPnQyXQ6ET80HrNQ1zcM37KQViVh8u4o3PtlxNeiGDxAfXyan9MsyIVY4Pw28PyyKrVcNK4eWzS3Fb3Ow/76Fi5Rcya04qSA9w8W3zpQcySDfLKF+GLhtzT5oLNvFeJyxvQz1eOr/Qvgc1EBQ9xScQAAAABJRU5ErkJggg==" />
                   </svg>
                 </button>
             </li>
-            <li class="drop-menu__content">
-              <p class="menu">Devenez actionnaire au nominatif pur AXA</p>
-              <p class="weight">2.5Mo</p>
-              <span class="select">
-                <button class="button_dl">
+            <li>
+              <button class="drop-menu__content button_dl">
+                <p class="menu">Devenez actionnaire au nominatif pur AXA</p>
+                <p class="weight">2.5Mo</p>
+                <span class="select">
                   <svg width="30px" height="36px">
                     <image  x="0px" y="0px" width="30px" height="36px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAMAAACpD3pbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA+VBMVEXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllX///+SDkBYAAAAUXRSTlMAJLaxIgmC+PZ/Tt/+nqLcTLTOOj3RsyOA720Ebt2gFxihIbLQPM9+b4FK26MZ3k/SPjuSY3DK1+36YooCr0DUTaRH8XwGsB/wcQjTP0ulfSD92fH0AAAAAWJLR0RSDWAtkAAAAAd0SU1FB+EEDAocKQfIOxgAAAE9SURBVDjL3ZPpVsIwEIVTAa0YpUWxQG2RAqLUKhXKjvuK633/lzEBpG1IX8D7K3O+nNyZkzuERKVspNIkSZnNLUDdzshpdgd0d48ip0mgogP5fUIOCsChIb5bVFEqm/xoHpWgFmMOmgVqV/6q4yqFlV1BpwbUG9HrjRNAVxbvNtm7p2bczCwzhzPm0HJBz731Vis2xcUlAdq+fNCrPMCwSRJkznFYd8DUCWsB2xzb/w53gx7HvaArxX0s1ZdiY7CgA0Pu7Q85Hfpyb0JGHI8SOydjYEwEHPnQyXQ6ET80HrNQ1zcM37KQViVh8u4o3PtlxNeiGDxAfXyan9MsyIVY4Pw28PyyKrVcNK4eWzS3Fb3Ow/76Fi5Rcya04qSA9w8W3zpQcySDfLKF+GLhtzT5oLNvFeJyxvQz1eOr/Qvgc1EBQ9xScQAAAABJRU5ErkJggg==" />
                   </svg>
