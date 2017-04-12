@@ -1,24 +1,29 @@
 body{
-  font-family: arial;
-  background: #E6E6E6;
-  margin: 0px;
-  font-size: 14px;
+  background-color: rgb(248, 248, 248);
 }
 
-main{
-  max-width: 550px;
+.document{
+  font-family: arial;
+  margin: 0px;
+  font-size: 14px;
+  max-width: 700px;
   margin: auto;
 }
 
 h1{
   font-size: 40px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 20px;
 }
-
+h2{
+  border-bottom: solid 1px rgb(231, 150, 85);
+  font-size: 16px;
+}
+//*********//
+//SECTION 1//
+//*********//
 .subcategory__1 {
-    h2{
-      border-bottom: solid 1px rgb(231, 150, 85);
-      font-size: 16px;
-    }
     .subtitle{
       margin: 0;
       margin-left: 5px;
@@ -31,8 +36,30 @@ h1{
       padding-left: 0px;
       font-size: 14px;
     }
-}
 
+    .download{
+      color: rgb(231, 150, 85);
+      border: solid 1px rgb(231, 150, 85);
+      display: flex;
+      margin-left: auto;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-right: 10px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    .download p:last-child{
+      margin-left: 5px;
+      font-size: 12px;
+    }
+    .download svg{
+      margin-right: 5px;
+    }
+}
+//*********//
+//DROP MENU//
+//*********//
 .drop-menu{
 
   padding: 0;
@@ -52,7 +79,7 @@ h1{
     margin: 0px;
     margin-left: 10px;
     flex-grow: 1;
-    max-width: 200px;
+    //max-width: 200px;
   }
 
   label{
@@ -64,18 +91,27 @@ h1{
 
   .select{
     position: relative;
+    margin-right: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
   }
 
   .polygone, .polygone-drop-down{
     opacity: 0.39;
   }
+
   .bar {
+    display: none;
     position: absolute;
     top: 17.5px;
     left: 9px;
   }
 
   .arrow{
+    display:none;
+  }
+
+  .arrow-drop-down{
     display:none;
   }
 
@@ -88,7 +124,6 @@ h1{
   }
 
   .checkbox_toggler:checked ~ label .chevron-down {
-    //top: 0;
   	transform: rotate(90deg);
   }
   .checkbox_toggler:checked ~ label .arrow {
@@ -97,26 +132,43 @@ h1{
     top: 13px;
     left: 6px;
   }
+
+  .checkbox_toggler:checked ~ label .sub-menu__arrow {
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 4.4px;
+  }
+
   .checkbox_toggler{
       display: none;
   }
-}
 
-.sub-menu{
-  display: none;
-  background: #E6E6E6;
-}
+  .sub-menu{
+    display: none;
+    background-color: rgb(248, 248, 248);
+  }
 
-.sub-menu, .sub-menu ul, .sub-menu li{
-  background: #E6E6E6;
-}
+  .sub-menu, .sub-menu ul, .sub-menu li{
+    background-color: rgb(248, 248, 248);
+  }
 
-.checkbox_toggler:checked ~ .sub-menu{
-  display: block;
-  padding-left: 30px;
-}
+  .checkbox_toggler:checked ~ .sub-menu{
+    display: block;
+  }
 
-//CHEVRON
+  .sub-menu__menu{
+    margin: 0px;
+    margin-left: 30px;
+    flex-grow: 1;
+    max-width: 200px;
+  }
+
+  .sub-menu__weight{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 //CHEVRON
 .chevron{
   padding-left: 10px;
@@ -141,4 +193,43 @@ h1{
 .chevron.bottom:before {
 	top: 0;
 	transform: rotate(135deg);
+}
+
+
+.subcategory__2 {
+    .ad{
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-content: center;
+
+      figure{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+      }
+      figcaption{
+          width: 160px;
+      }
+    }
+}
+
+.subcategory__3{
+    .drop-menu__content{
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+  }
+}
+
+.button_dl{
+  background-color: transparent;
+  border: 0;
+  padding: 0px;
+}
+
+button, label{
+  cursor: pointer
 }
