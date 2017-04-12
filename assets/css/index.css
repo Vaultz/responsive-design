@@ -1,40 +1,87 @@
 body {
   margin: 0; }
+  body #headband {
+    display: flex;
+    padding: 2%;
+    align-items: center;
+    background-color: #103084;
+    color: white;
+    height: 8vh; }
+    body #headband img {
+      border: solid #284591;
+      border-radius: 50%;
+      padding: 7px; }
 
 header {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  height: 6vh; }
   header img {
     max-height: 30px;
-    max-width: 300px; }
+    max-width: 300px;
+    align-self: center; }
   header button {
     background: none;
     border: none; }
-  header div :first-child {
-    white-space: pre-line; }
-  header div .year {
-    font-size: 35px;
-    font-weight: bold; }
+  header div {
+    align-self: center; }
+    header div :first-child {
+      white-space: pre-line; }
+    header div .year {
+      font-size: 35px;
+      font-weight: bold; }
 
-section picture img {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  height: 100%; }
-section .polygonbox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-  section .polygonbox svg {
-    transform: rotate(90deg); }
-section .polygons {
+main {
+  background: url(../images/image_home_mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: calc(98vh - ( 8vh + 6vh ) ); }
+  main section .polygonbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    main section .polygonbox svg {
+      transform: rotate(90deg); }
+  main section .polygon1 {
+    transform: translate(0%, 9%); }
+    main section .polygon1:hover img {
+      display: block; }
+    main section .polygon1:hover path {
+      fill-opacity: 1;
+      fill: #f4887e; }
+  main section .polygon2 {
+    transform: translate(-14%, 52%); }
+    main section .polygon2:hover img {
+      display: block; }
+    main section .polygon2:hover path {
+      fill-opacity: 1;
+      fill: #98c67f; }
+  main section .polygon3 {
+    transform: translate(0%, -5%); }
+    main section .polygon3:hover img {
+      display: block; }
+    main section .polygon3:hover path {
+      fill-opacity: 1;
+      fill: #5a8fa6; }
+  main section .polygon4 {
+    transform: translate(-14%, 38%); }
+    main section .polygon4:hover img {
+      display: block; }
+    main section .polygon4:hover path {
+      fill-opacity: 1;
+      fill: #fcc04b; }
+
+.polygons {
   z-index: 1;
-  width: 43%;
+  width: 42%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  section .polygons div {
+  .polygons div {
     position: absolute;
     text-decoration: none;
     color: white;
@@ -46,10 +93,11 @@ section .polygons {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    section .polygons div img {
+    .polygons div img {
       width: 20px;
-      display: none; }
-  section .polygons path {
+      display: none;
+      align-self: center; }
+  .polygons path {
     stroke: white;
     stroke-width: 2.031px;
     stroke-linecap: butt;
@@ -57,52 +105,62 @@ section .polygons {
     fill-opacity: 0.251;
     fill: #292929;
     transition: .3s; }
-section .polygon1 {
-  transform: translate(6%, 6%); }
-  section .polygon1:hover img {
-    display: block; }
-  section .polygon1:hover path {
-    fill-opacity: 1;
-    fill: #f4887e; }
-section .polygon2 {
-  transform: translate(-7%, 49%); }
-  section .polygon2:hover img {
-    display: block; }
-  section .polygon2:hover path {
-    fill-opacity: 1;
-    fill: #98c67f; }
-section .polygon3 {
-  transform: translate(6%, -8%); }
-  section .polygon3:hover img {
-    display: block; }
-  section .polygon3:hover path {
-    fill-opacity: 1;
-    fill: #5a8fa6; }
-section .polygon4 {
-  transform: translate(-8%, 35%); }
-  section .polygon4:hover img {
-    display: block; }
-  section .polygon4:hover path {
-    fill-opacity: 1;
-    fill: #fcc04b; }
 
-.show_on_mobile {
+.hide_on_desktop {
   display: none; }
 
-footer {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  bottom: 0;
-  padding: 2%;
-  background-color: #000;
-  text-align: center; }
+#mobilefooter {
+  background-color: black;
+  margin-top: -41px;
+  width: 43px; }
+
+#basicfooter {
+  color: lightgrey;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: -72px; }
+
+.leftpart {
+  background-color: #232321;
+  padding: 15px; }
+  .leftpart img {
+    width: 18px; }
+  .leftpart p {
+    margin: 0; }
+
+.middlepart p {
+  align-self: center;
+  margin: 0; }
+
+.rightpart p {
+  margin: 0; }
+.rightpart .socialmedia_icons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end; }
+
+.icons {
+  color: white;
+  text-decoration: none; }
+
+.icons::after {
+  content: " | ";
+  white-space: pre-wrap; }
 
 @media screen and (max-width: 600px) {
-  .show_on_mobile {
-    display: block; } }
-@media screen and (max-width: 600px) {
   .hide_on_mobile {
-    display: none; } }
+    display: none; }
+
+  .hide_on_desktop {
+    display: flex; } }
+@media screen and (min-width: 601px) {
+  main section .polygonbox svg {
+    transform: rotate(0); }
+
+  .polygons {
+    transform: translate(0%, 0%) !important; }
+
+  #basicfooter {
+    display: flex; } }
 
 /*# sourceMappingURL=index.css.map */

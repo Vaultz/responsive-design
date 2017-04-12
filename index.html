@@ -11,10 +11,17 @@
   </head>
   <body>
 
+    <div id="headband">
+      <p>
+        En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de Cookies pour réaliser des statistiques de visites et vous proposer du contenu ciblé.
+      </p>
+      <img id="closing_cross" src="assets/images/icon_close.png" alt="Icone de fermeture du bandeau">
+    </div>
+
     <header>
 
-      <button type="button" name="button">
-        <img class="show_on_mobile" src="assets/images/burger_menu.png" alt="Menu burger">
+      <button id="burgerbutton" type="button" name="button">
+        <img class="hide_on_desktop" src="assets/images/burger_menu.png" alt="Menu burger">
       </button>
 
       <img src="assets/images/logo_axa.jpg" alt="Logo AXA">
@@ -25,110 +32,149 @@
       </div>
     </header>
 
-    <section>
-      <picture>
-        <source srcset="assets/images/image_home.jpg" media="(min-width: 600px)">
-        <img class="home_desktop" src="assets/images/image_home_mobile.png" alt="Image d'accueil grande taille">
-      </picture>
+    <main>
 
-      <article class="polygonbox">
+      <section>
 
-        <a
-        href="#"
-        class="polygons polygon1"
-        >
-          <div>
-            mot du président
-            <img class="show_on_mobile" src="assets/images/icon_plus_sm.png" alt="Icone plus">
-          </div>
-          <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 218 252"
-          >
-            <path
-            fill-rule="evenodd"
-            transform="translate(-476.5 -250.5)"
-            d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z"
-            />
-          </svg>
-        </a>
+          <article class="hide_on_mobile">
+            <p>protéger</p>
+            <p>accompagner</p>
+            <p>innover</p>
 
-        <a
-        href="#"
-        class="polygons polygon2"
-        >
-          <div>
-            engagés pour mieux protéger
-            <img class="show_on_mobile" src="assets/images/icon_plus_sm.png" alt="Icone plus">
-          </div>
-          <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 218 252"
-          >
-            <path
-            fill-rule="evenodd"
-            transform="translate(-476.5 -250.5)"
-            d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z"
-            />
-          </svg>
-        </a>
+          </article>
 
-        <a
-        href="#"
-        class="polygons polygon3"
-        >
-          <div>
-            stratégie Ambition AXA
-            <img class="show_on_mobile" src="assets/images/icon_plus_sm.png" alt="Icone plus">
-          </div>
-          <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 218 252"
-          >
-            <path
-            fill-rule="evenodd"
-            transform="translate(-476.5 -250.5)"
-            d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z"
-            />
-          </svg>
-        </a>
+          <article class="polygonbox">
 
-        <a
-        href="#"
-        class="polygons polygon4"
-        >
-          <div>
-            chiffres clés
-            <img class="show_on_mobile" src="assets/images/icon_plus_sm.png" alt="Icone plus">
-          </div>
-          <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 218 252"
-          >
-            <path
-            fill-rule="evenodd"
-            transform="translate(-476.5 -250.5)"
-            d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z"
-            />
-          </svg>
-        </a>
+            <a href="#" class="polygons polygon1">
+              <div>
+                mot du président
+                <img class="" src="assets/images/icon_plus_sm.png" alt="Icone plus">
+              </div>
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 218 252"
+              >
+              <path
+              fill-rule="evenodd"
+              transform="translate(-476.5 -250.5)"
+              d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z"
+              />
+              </svg>
+            </a>
+
+            <a
+                href="#"
+                class="polygons polygon2 hide_on_desktop"
+                >
+                <div class="">
+                  engagés pour mieux protéger
+                  <img src="assets/images/icon_plus_sm.png" alt="Icone plus">
+                </div>
+                <svg
+                class=""
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 218 252"
+                >
+                <path
+                class=""
+                fill-rule="evenodd"
+                transform="translate(-476.5 -250.5)"
+                d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z"
+                />
+              </svg>
+            </a>
+
+            <a href="#" class="polygons polygon3">
+                <div>
+                    stratégie Ambition AXA
+                    <img class="" src="assets/images/icon_plus_sm.png" alt="Icone plus">
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 218 252">
+                  <path
+                  fill-rule="evenodd"
+                  transform="translate(-476.5 -250.5)"
+                  d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z"
+                  />
+              </svg>
+            </a>
+
+            <a href="#" class="polygons polygon4">
+              <div>
+                chiffres clés
+                <img class="hide_on_desktop" src="assets/images/icon_plus_sm.png" alt="Icone plus">
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 218 252">
+                <path
+                  fill-rule="evenodd"
+                  transform="translate(-476.5 -250.5)"
+                  d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z"/>
+              </svg>
+            </a>
 
 
 
 
-      </article>
+    </article>
 
 
 
-    </section>
+</section>
 
-    <footer>
+    </main>
+
+    <footer id="mobilefooter" class="hide_on_desktop">
       <img class="sharing" src="assets/images/logo_share.png" alt="Sharing Logo">
     </footer>
 
+    <footer id="basicfooter" class="hide_on_mobile">
+      <div class="leftpart">
+        <img class="sharing" src="assets/images/logo_share.png" alt="Sharing Logo">
+        <p class="fr_language">
+          FR
+        </p>
+      </div>
+      <p class="middlepart">Mention légales ©AXA 2015</p>
+      <div class="rightpart">
+        <p>AXA sur les réseaux sociaux</p>
+        <div class="socialmedia_icons">
+          <a href="#" class="icons">
+            <img src="assets/images/logo_facebook.png" alt="Logo Facebook">
+
+          </a>
+          <a href="#" class="icons">
+            <img src="assets/images/logo_twitter.png" alt="Logo Twitter">
+
+          </a>
+          <a href="#" class="icons">
+            <img src="assets/images/logo_linkedin.png" alt="Logo Linkedin">
+
+          </a>
+          <a href="#" class="icons">
+            <img src="assets/images/logo_youtube.png" alt="Logo YouTube">
+
+          </a>
+          <img src="assets/images/logo_instagram.png" alt="Logo Instagram">
+      </div>
+    </footer>
+
+
+  <script type="text/javascript">
+
+    // header event
+    document.getElementById('closing_cross').addEventListener("click", function removeHeadband() {
+      document.getElementById('headband').parentNode.removeChild(document.getElementById("headband"));
+    });
+
+    var clientWidth = document.documentElement.clientWidth;
+    if (clientWidth > 600) {
+      document.getElementById('burgerbutton').parentNode.removeChild(document.getElementById('burgerbutton'));
+    }
+
+  </script>
   </body>
 </html>

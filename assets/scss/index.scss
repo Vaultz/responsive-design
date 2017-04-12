@@ -1,16 +1,37 @@
 // sass --watch assets/scss/index.scss:assets/css/index.css
 
+$headbandHeight: 8vh;
+$headerHeight: 6vh;
+
 body {
   margin:0;
+
+  #headband {
+    display: flex;
+    padding: 2%;
+    align-items: center;
+    background-color: #103084;
+    color:white;
+    height: $headbandHeight;
+
+
+    img {
+      border: solid #284591;
+      border-radius: 50%;
+      padding: 7px;
+    }
+  }
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  height: $headerHeight;
 
   img {
     max-height: 30px;
     max-width: 300px;
+    align-self: center;
   }
 
   button {
@@ -19,6 +40,7 @@ header {
   }
 
   div {
+    align-self: center;
     :first-child {
       white-space:pre-line;
     }
@@ -31,24 +53,32 @@ header {
 }
 
 
-section {
-  picture {
+main {
 
+  background: url(../images/image_home_mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: calc(98vh - ( #{$headbandHeight} + #{$headerHeight} ) );
 
+  section {
+    picture {
 
-    img {
-      position: absolute;
-      z-index: 0;
-      width:100%;
-      height: 100%;
+    //   img {
+    //   position: absolute;
+    //   z-index: 0;
+    //   width:100%;
+    //   height: 100%;
+    // }
+
     }
 
-  }
 
   .polygonbox {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 
     svg {
       transform: rotate(90deg);
@@ -58,11 +88,60 @@ section {
   }
 
 
+  .polygon1 {
+    transform: translate(0%, 9%);
 
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #f4887e;
+    }
 
-  .polygons {
+  }
+
+  .polygon2 {
+    transform: translate(-14%, 52%);
+    // transform: translate(-16%, 25%);
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #98c67f;
+    }
+  }
+
+  .polygon3 {
+    transform: translate(0%, -5%);
+    // transform: translate(-192%, 57%);
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #5a8fa6;
+    }
+  }
+
+  .polygon4 {
+    transform: translate(-14%, 38%);
+    &:hover img {
+      display:block;
+    }
+    &:hover path {
+      fill-opacity:1;
+      fill: #fcc04b;
+    }
+  }
+  }
+}
+
+.polygons {
     z-index:1;
-    width:43%;
+    width: 42%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,10 +160,11 @@ section {
       justify-content: center;
       align-items: center;
 
-      img {
-        width: 20px;
-        display:none;
-      }
+        img {
+          width: 20px;
+          display:none;
+          align-self: center;
+        }
     }
 
     path {
@@ -99,76 +179,88 @@ section {
     }
   }
 
-  .polygon1 {
-    transform: translate(6%, 6%);
-
-    &:hover img {
-      display:block;
-    }
-    &:hover path {
-      fill-opacity:1;
-      fill: #f4887e;
-    }
-
-  }
-
-  .polygon2 {
-    transform: translate(-7%, 49%);
-    &:hover img {
-      display:block;
-    }
-    &:hover path {
-      fill-opacity:1;
-      fill: #98c67f;
-    }
-  }
-
-  .polygon3 {
-    transform: translate(6%, -8%);
-    &:hover img {
-      display:block;
-    }
-    &:hover path {
-      fill-opacity:1;
-      fill: #5a8fa6;
-    }
-  }
-
-  .polygon4 {
-    transform: translate(-8%, 35%);
-    &:hover img {
-      display:block;
-    }
-    &:hover path {
-      fill-opacity:1;
-      fill: #fcc04b;
-    }
-  }
-}
-
-.show_on_mobile {
+.hide_on_desktop {
   display:none;
 }
 
-footer {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  bottom:0;
-  padding: 2%;
-  background-color: #000;
-  text-align: center;
+
+#mobilefooter {
+  background-color: black;
+  margin-top: -41px;
+  width: 43px;
 }
 
+#basicfooter {
+  color: lightgrey;
+  // display-flex is triggered by media query
+  justify-content: space-between;
+  align-items: flex-end;
+  // height: 63px;
+  margin-top: -72px;
+}
 
-@media screen and (max-width : 600px) {
-  .show_on_mobile {
-    display:block;
+.leftpart {
+  background-color: #232321;
+  padding: 15px;
+
+  img {
+    width:18px
+  }
+
+  p {
+    margin:0;
   }
 }
+
+.middlepart {
+
+  p {
+    align-self: center;
+    margin:0;
+  }
+}
+
+.rightpart {
+  p {
+    margin:0;
+  }
+
+  .socialmedia_icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+
+}
+
+.icons {
+  color:white;
+  text-decoration:none;
+}
+
+.icons::after {
+  content:" | ";
+  white-space: pre-wrap;
+}
+
 
 @media screen and (max-width : 600px) {
   .hide_on_mobile {
     display:none;
+  }
+  .hide_on_desktop {
+    display:flex;
+  }
+}
+
+@media screen and (min-width : 601px) {
+  main section .polygonbox svg {
+    transform: rotate(0);
+  }
+  .polygons {
+    transform: translate(0%, 0%)!important;
+  }
+  #basicfooter {
+    display:flex;
   }
 }
