@@ -4,6 +4,7 @@ $headbandHeight: 8vh;
 $headerHeight: 6vh;
 
 body {
+  font-family: arial;
   margin:0;
 
   #headband {
@@ -13,7 +14,7 @@ body {
     background-color: #103084;
     color:white;
     height: $headbandHeight;
-
+    // max-height: 55px; PB : causes a blank bottom margin
 
     img {
       border: solid #284591;
@@ -55,22 +56,20 @@ header {
 
 main {
 
-  background: url(../images/image_home_mobile.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background-url fixed in meadia query
   width: 100vw;
   height: calc(98vh - ( #{$headbandHeight} + #{$headerHeight} ) );
 
   section {
-    picture {
-
-    //   img {
-    //   position: absolute;
-    //   z-index: 0;
-    //   width:100%;
-    //   height: 100%;
-    // }
-
+    nav {
+      ul {
+        margin:0;
+        list-style-type: none;
+        color:#FFF;
+        margin-left: 4vw;
+        font-weight: bold;
+        font-size: 41px;
+      }
     }
 
 
@@ -79,6 +78,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    max-width: 122vh;
 
     svg {
       transform: rotate(90deg);
@@ -183,7 +183,6 @@ main {
   display:none;
 }
 
-
 #mobilefooter {
   background-color: black;
   margin-top: -41px;
@@ -243,9 +242,12 @@ main {
   white-space: pre-wrap;
 }
 
-
-
 @media screen and (max-width : 600px) {
+  main {
+    background: url(../images/image_home_mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .hide_on_mobile {
     display:none;
   }
@@ -254,14 +256,46 @@ main {
   }
 }
 
+// On small and medium screens
+@media screen and (max-width: 900px) {
+  .hide_on_mobile_and_tablets {
+    display:none;
+  }
+
+}
+
+// On medium screeens only
+@media screen and (min-width : 601px) and (max-width : 899px) {
+  .polygon4 {
+    transform: translate(0%, -25%)!important;
+
+  }
+}
+
+// On large screens only
 @media screen and (min-width : 601px) {
+  main {
+    background: url(../images/image_home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   main section .polygonbox svg {
     transform: rotate(0);
   }
+
   .polygons {
     transform: translate(0%, 0%)!important;
   }
+
   #basicfooter {
     display:flex;
+  }
+}
+
+// on large screens only
+@media screen and (min-width : 901px) {
+  .hide_on_mobile_and_tablets {
+    display:flex;
+    transform: translate(50%, -25%)!important;
   }
 }
