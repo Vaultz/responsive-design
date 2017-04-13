@@ -9,11 +9,13 @@ body {
 
   #headband {
     display: flex;
-    // padding: 2%;
     align-items: center;
+    justify-content: center;
     background-color: #103084;
     color:white;
     height: $headbandHeight;
+    padding-left: 15px;
+    padding-right: 15px;
     // max-height: 55px; PB : causes a blank bottom margin
 
     p {
@@ -32,6 +34,8 @@ header {
   display: flex;
   justify-content: space-between;
   height: $headerHeight;
+
+
 
   img {
     max-height: 30px;
@@ -80,7 +84,6 @@ main {
     .polygonbox {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       align-items: center;
 
       svg {
@@ -92,9 +95,7 @@ main {
     .polygon1 {
       transform: translate(0%, 9%);
 
-      &:hover img {
-        display:block;
-      }
+
       &:hover path {
         fill-opacity:1;
         fill: #f4887e;
@@ -104,10 +105,7 @@ main {
 
     .polygon2 {
       transform: translate(-14%, 52%);
-      // transform: translate(-16%, 25%);
-      &:hover img {
-        display:block;
-      }
+
       &:hover path {
         fill-opacity:1;
         fill: #98c67f;
@@ -116,9 +114,7 @@ main {
 
     .polygon3 {
       transform: translate(0%, -5%);
-      &:hover img {
-        display:block;
-      }
+
       &:hover path {
         fill-opacity:1;
         fill: #5a8fa6;
@@ -127,9 +123,7 @@ main {
 
     .polygon4 {
       transform: translate(-14%, 38%);
-      &:hover img {
-        display:block;
-      }
+
       &:hover path {
         fill-opacity:1;
         fill: #fcc04b;
@@ -137,9 +131,7 @@ main {
     }
 
     .polygon5 {
-      &:hover img {
-        display:block;
-      }
+
       &:hover path {
         fill-opacity:1;
         fill: #a69d57;
@@ -148,9 +140,7 @@ main {
 
 
     .polygon6 {
-      &:hover img {
-        display:block;
-      }
+
       &:hover path {
         fill-opacity:1;
         fill: #98c67f;
@@ -159,9 +149,7 @@ main {
 
 
     .polygon7 {
-      &:hover img {
-        display:block;
-      }
+
       &:hover path {
         fill-opacity:1;
         fill: #e79655;
@@ -181,24 +169,37 @@ main {
     justify-content: center;
     align-items: center;
 
+
+
+
     div {
       position:absolute;
-      text-decoration: none;
-      color:white;
-      font-weight: bold;
-      width: 70%;
-      text-align: center;
-      z-index: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      margin-top: 10px;
+      text-decoration: none;
+      color:white;
+      font-weight: bold;
+      width: 70%;
+      z-index: 1;
 
         img {
           width: 20px;
-          display:none;
+          // display:none;
           align-self: center;
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0s, opacity 0.2s linear;
         }
+    }
+
+    &:hover img {
+      // display:block;
+      visibility: visible;
+      opacity: 1;
     }
 
     path {
@@ -219,7 +220,7 @@ main {
 
 #mobilefooter {
   background-color: black;
-  margin-top: -41px;
+  margin-top: -37px;
   width: 43px;
 }
 
@@ -228,8 +229,7 @@ main {
   // display-flex is triggered by media query
   justify-content: space-between;
   align-items: flex-end;
-  // height: 63px;
-  margin-top: -72px;
+  margin-top: -90px;
 }
 
 .leftpart {
@@ -240,8 +240,13 @@ main {
     width:18px
   }
 
+  & :nth-child(2) {
+    color:grey;
+  }
+
   p {
     margin:0;
+    text-align:center;
   }
 }
 
@@ -251,17 +256,27 @@ main {
     align-self: center;
     margin:0;
   }
+
+  a {
+    text-decoration: none;
+    color:grey;
+  }
 }
 
 .rightpart {
+  margin: 9px;
   p {
-    margin:0;
+    margin-bottom: 8px;
   }
 
   .socialmedia_icons {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
+
+    img {
+      opacity:.6;
+    }
   }
 
 }
@@ -274,6 +289,7 @@ main {
 .icons::after {
   content:" | ";
   white-space: pre-wrap;
+  color:darkgrey;
 }
 
 @media screen and (max-width : 600px) {
@@ -296,34 +312,27 @@ main {
     display:none;
   }
   .polygonbox {
-    max-width: 122vh;
+    max-width: 57vh;
+    justify-content: center;
   }
   .polygons {
     max-width: 300px;
   }
 }
 
-// On medium screens only
-@media screen and (min-width : 601px) and (max-width : 899px) {
-  #polygon4 {
-    transform: translate(0%, -25%)!important;
-
-  }
-}
-
 // On medium and large screens
 @media screen and (min-width : 601px) {
+  header {
+    img {
+      margin-left: 26px;
+    }
+  }
   main {
-    background: url(../images/image_home.jpg);
+    background: url(../images/image_home_large.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  main section .polygonbox svg {
-    transform: rotate(0);
-  }
 
-  .polygons {
-    transform: translate(0%, 0%)!important;
+
   }
 
   #basicfooter {
@@ -333,9 +342,19 @@ main {
 
 // on large and XL screens
 @media screen and (min-width : 901px) {
+  main section .polygonbox svg {
+    transform: rotate(0);
+  }
+
+  .polygons {
+    transform: translate(0%, 0%)!important;
+  }
   .hide_on_mobile_and_tablets {
     display:flex;
     transform: translate(50%, -25%)!important;
+  }
+  .polygon2 {
+    display:none;
   }
 }
 
@@ -352,10 +371,20 @@ main {
 
 }
 
+// on all screens exept XL
+@media screen and (max-width: 1200px) {
+  .polygonbox {
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .polygonbox {
-    max-width: 967px;
+    max-width: 808px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .polygons {
     max-width: 243px;

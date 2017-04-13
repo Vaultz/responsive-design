@@ -72,7 +72,7 @@
 
             <a
                 href="#"
-                class="polygons polygon2 hide_on_desktop"
+                class="polygons polygon2"
                 >
                 <div class="">
                   engagés pour mieux protéger
@@ -110,7 +110,7 @@
             <a href="#" class="polygons polygon4" id="polygon4">
               <div>
                 chiffres clés
-                <img class="hide_on_desktop" src="assets/images/icon_plus_sm.png" alt="Icone plus">
+                <img src="assets/images/icon_plus_sm.png" alt="Icone plus">
               </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -182,18 +182,22 @@
 
     </main>
 
-    <footer id="mobilefooter" class="hide_on_desktop">
-      <img class="sharing" src="assets/images/logo_share.png" alt="Sharing Logo">
-    </footer>
+    <footer>
+      <section id="mobilefooter" class="hide_on_desktop">
+        <img class="sharing" src="assets/images/logo_share.png" alt="Sharing Logo">
+      </section>
 
-    <footer id="basicfooter" class="hide_on_mobile">
+      <section id="basicfooter" class="hide_on_mobile">
       <div class="leftpart">
         <img class="sharing" src="assets/images/logo_share.png" alt="Sharing Logo">
+        <p>
+          —
+        </p>
         <p class="fr_language">
           FR
         </p>
       </div>
-      <p class="middlepart">Mention légales ©AXA 2015</p>
+      <p class="middlepart"><a href="http://www.nyan.cat/">Mention légales ©AXA 2015</a></p>
       <div class="rightpart">
         <p>AXA sur les réseaux sociaux</p>
         <div class="socialmedia_icons">
@@ -211,26 +215,16 @@
           </a>
           <a href="#" class="icons">
             <img src="assets/images/logo_youtube.png" alt="Logo YouTube">
-
           </a>
-          <img src="assets/images/logo_instagram.png" alt="Logo Instagram">
+          <a href="#" class="">
+            <img src="assets/images/logo_instagram.png" alt="Logo Instagram">
+          </a>
       </div>
+    </section>
+
     </footer>
 
+  <script type="text/javascript" src="assets/js/index.js"></script>
 
-  <script type="text/javascript">
-
-    // header event
-    document.getElementById('closing_cross').addEventListener("click", function removeHeadband() {
-      document.getElementById('headband').parentNode.removeChild(document.getElementById("headband"));
-      document.getElementById('main').style.height = ('94vh');
-    });
-
-    var clientWidth = document.documentElement.clientWidth;
-    if (clientWidth > 600) {
-      document.getElementById('burgerbutton').parentNode.removeChild(document.getElementById('burgerbutton'));
-    }
-
-  </script>
   </body>
 </html>
