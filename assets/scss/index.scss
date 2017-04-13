@@ -9,12 +9,16 @@ body {
 
   #headband {
     display: flex;
-    padding: 2%;
+    // padding: 2%;
     align-items: center;
     background-color: #103084;
     color:white;
     height: $headbandHeight;
     // max-height: 55px; PB : causes a blank bottom margin
+
+    p {
+      margin:0;
+    }
 
     img {
       border: solid #284591;
@@ -57,8 +61,8 @@ header {
 main {
 
   // background-url fixed in meadia query
-  width: 100vw;
-  height: calc(98vh - ( #{$headbandHeight} + #{$headerHeight} ) );
+  // width: 100vw;
+  height: calc(100vh - ( #{$headbandHeight} + #{$headerHeight} ) );
 
   section {
     nav {
@@ -73,75 +77,105 @@ main {
     }
 
 
-  .polygonbox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 122vh;
+    .polygonbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
 
-    svg {
-      transform: rotate(90deg);
+      svg {
+        transform: rotate(90deg);
+      }
     }
 
 
-  }
+    .polygon1 {
+      transform: translate(0%, 9%);
+
+      &:hover img {
+        display:block;
+      }
+      &:hover path {
+        fill-opacity:1;
+        fill: #f4887e;
+      }
+
+    }
+
+    .polygon2 {
+      transform: translate(-14%, 52%);
+      // transform: translate(-16%, 25%);
+      &:hover img {
+        display:block;
+      }
+      &:hover path {
+        fill-opacity:1;
+        fill: #98c67f;
+      }
+    }
+
+    .polygon3 {
+      transform: translate(0%, -5%);
+      &:hover img {
+        display:block;
+      }
+      &:hover path {
+        fill-opacity:1;
+        fill: #5a8fa6;
+      }
+    }
+
+    .polygon4 {
+      transform: translate(-14%, 38%);
+      &:hover img {
+        display:block;
+      }
+      &:hover path {
+        fill-opacity:1;
+        fill: #fcc04b;
+      }
+    }
+
+    .polygon5 {
+      &:hover img {
+        display:block;
+      }
+      &:hover path {
+        fill-opacity:1;
+        fill: #a69d57;
+      }
+    }
 
 
-  .polygon1 {
-    transform: translate(0%, 9%);
+    .polygon6 {
+      &:hover img {
+        display:block;
+      }
+      &:hover path {
+        fill-opacity:1;
+        fill: #98c67f;
+      }
+    }
 
-    &:hover img {
-      display:block;
-    }
-    &:hover path {
-      fill-opacity:1;
-      fill: #f4887e;
+
+    .polygon7 {
+      &:hover img {
+        display:block;
+      }
+      &:hover path {
+        fill-opacity:1;
+        fill: #e79655;
+      }
     }
 
-  }
 
-  .polygon2 {
-    transform: translate(-14%, 52%);
-    // transform: translate(-16%, 25%);
-    &:hover img {
-      display:block;
-    }
-    &:hover path {
-      fill-opacity:1;
-      fill: #98c67f;
-    }
-  }
 
-  .polygon3 {
-    transform: translate(0%, -5%);
-    // transform: translate(-192%, 57%);
-    &:hover img {
-      display:block;
-    }
-    &:hover path {
-      fill-opacity:1;
-      fill: #5a8fa6;
-    }
-  }
-
-  .polygon4 {
-    transform: translate(-14%, 38%);
-    &:hover img {
-      display:block;
-    }
-    &:hover path {
-      fill-opacity:1;
-      fill: #fcc04b;
-    }
-  }
   }
 }
 
 .polygons {
     z-index:1;
     width: 42%;
-    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -262,18 +296,23 @@ main {
   .hide_on_mobile_and_tablets {
     display:none;
   }
-
+  .polygonbox {
+    max-width: 122vh;
+  }
+  .polygons {
+    max-width: 300px;
+  }
 }
 
-// On medium screeens only
+// On medium screens only
 @media screen and (min-width : 601px) and (max-width : 899px) {
-  .polygon4 {
+  #polygon4 {
     transform: translate(0%, -25%)!important;
 
   }
 }
 
-// On large screens only
+// On medium and large screens
 @media screen and (min-width : 601px) {
   main {
     background: url(../images/image_home.jpg);
@@ -293,10 +332,33 @@ main {
   }
 }
 
-// on large screens only
+// on large and XL screens
 @media screen and (min-width : 901px) {
   .hide_on_mobile_and_tablets {
     display:flex;
     transform: translate(50%, -25%)!important;
+  }
+}
+
+// on large screens only
+@media screen and (min-width : 901px) and (max-width : 1200px) {
+
+  .polygonbox {
+    max-width: 90%;
+  }
+  .polygons {
+    width: 26%;
+    // max-width: 228px;
+  }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+  .polygonbox {
+    max-width: 967px;
+  }
+  .polygons {
+    max-width: 243px;
   }
 }

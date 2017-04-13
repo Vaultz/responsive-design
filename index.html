@@ -9,7 +9,8 @@
 
     <title>AXA - Réinventons notre métier</title>
   </head>
-  <body>
+
+  <body id="body">
 
     <div id="headband">
       <p>
@@ -21,7 +22,7 @@
     <header>
 
       <button id="burgerbutton" type="button" name="button">
-        <img class="hide_on_desktop" src="assets/images/burger_menu.png" alt="Menu burger">
+        <img class="" src="assets/images/burger_menu.png" alt="Menu burger">
       </button>
 
       <img src="assets/images/logo_axa.jpg" alt="Logo AXA">
@@ -32,7 +33,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main">
 
       <section>
         <nav class="hide_on_mobile">
@@ -106,7 +107,7 @@
               </svg>
             </a>
 
-            <a href="#" class="polygons polygon4">
+            <a href="#" class="polygons polygon4" id="polygon4">
               <div>
                 chiffres clés
                 <img class="hide_on_desktop" src="assets/images/icon_plus_sm.png" alt="Icone plus">
@@ -222,6 +223,7 @@
     // header event
     document.getElementById('closing_cross').addEventListener("click", function removeHeadband() {
       document.getElementById('headband').parentNode.removeChild(document.getElementById("headband"));
+      document.getElementById('main').style.height = ('94vh');
     });
 
     var clientWidth = document.documentElement.clientWidth;
