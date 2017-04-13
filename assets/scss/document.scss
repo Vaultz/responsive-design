@@ -42,7 +42,6 @@ h2{
       border: solid 1px rgb(231, 150, 85);
       display: flex;
       margin-left: auto;
-      align-items: center;
       padding-left: 10px;
       padding-right: 10px;
       margin-right: 10px;
@@ -250,6 +249,8 @@ h2{
   padding: 0px;
   text-align: left;
   font-size: 14px;
+  text-decoration: none;
+  color: black;
 }
 
 button, label{

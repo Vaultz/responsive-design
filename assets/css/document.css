@@ -32,7 +32,6 @@ h2 {
   border: solid 1px #e79655;
   display: flex;
   margin-left: auto;
-  align-items: center;
   padding-left: 10px;
   padding-right: 10px;
   margin-right: 10px;
@@ -170,7 +169,9 @@ h2 {
   border: 0;
   padding: 0px;
   text-align: left;
-  font-size: 14px; }
+  font-size: 14px;
+  text-decoration: none;
+  color: black; }
 
 button, label {
   cursor: pointer; }
