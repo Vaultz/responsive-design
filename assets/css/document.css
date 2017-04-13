@@ -1,9 +1,9 @@
 body {
-  background-color: #f8f8f8; }
+  background-color: #f8f8f8;
+  margin: 0px; }
 
 .document {
   font-family: arial;
-  margin: 0px;
   font-size: 14px;
   max-width: 700px;
   margin: auto; }
@@ -175,5 +175,47 @@ h2 {
 
 button, label {
   cursor: pointer; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 6vh;
+  background-color: white; }
+  header img {
+    max-height: 30px;
+    max-width: 300px;
+    align-self: center; }
+  header button {
+    background: none;
+    border: none; }
+  header div {
+    align-self: center; }
+    header div :first-child {
+      white-space: pre-line; }
+    header div .year {
+      font-size: 35px;
+      font-weight: bold; }
+
+@media screen and (max-width: 600px) {
+  .show_on_mobile {
+    display: block; }
+
+  .show_on_desktop {
+    display: none; } }
+@media screen and (min-width: 600px) {
+  .show_on_mobile {
+    display: none; }
+
+  .show_on_desktop {
+    display: block; } }
+@media screen and (max-width: 700px) {
+  header {
+    padding-top: 5px; }
+
+  h1 {
+    padding-left: 5px; }
+
+  h2 {
+    padding-left: 5px; } }
 
 /*# sourceMappingURL=document.css.map */
