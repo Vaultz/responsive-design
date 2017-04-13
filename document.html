@@ -6,21 +6,19 @@
         <title>Axa - Document</title>
         <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="assets/css/document.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/index.css">
-        <script type="text/javascript" src="assets/js/document.js"></script>
     </head>
 
     <body>
 
       <header>
 
-        <button type="button" name="button">
-          <img class="show_on_mobile" src="assets/images/burger_menu.png" alt="Menu burger">
+        <button class="show_on_mobile" type="button" name="button">
+          <img src="assets/images/burger_menu.png" alt="Menu burger">
         </button>
 
         <img src="assets/images/logo_axa.jpg" alt="Logo AXA">
         <div>
-          <span class="hide_on_mobile">regards sur
+          <span class="show_on_desktop">regards sur
           </span>
           <span class="year">2014</span>
         </div>
@@ -31,7 +29,7 @@
         <h1>documents</h1>
         <section class="subcategory__1">
           <h2>Rapport personnalisé</h2>
-          <p class="subtitle">télécharger ci-dessous le document personnalisé à partir de l'édition papier du <strong>rapport d'activité et de responsabilité d'entreprise 2014.</strong></p>
+          <p class="subtitle">Télécharger ci-dessous le document personnalisé à partir de l'édition papier du <strong>rapport d'activité et de responsabilité d'entreprise 2014.</strong></p>
 
           <form name="dl">
 
@@ -80,7 +78,7 @@
                   <span class="chevron chevron-down"></span>
                   <p class="menu">Notre groupe</p>
                   <p class="weight">1,6Mo</p>
-                  <span class="select" onclick="allChecked()">
+                  <span class="select" id="dropdown">
                     <svg id="polygone-drop-down" class="polygone-drop-down" width="33px" height="40px">
                         <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
                        d="M30.998,28.896 L16.017,37.912 L1.019,28.927 L1.002,10.924 L15.983,1.908 L30.981,10.894 L30.998,28.896 Z"/>
@@ -97,7 +95,7 @@
                 </label>
                 <ul class="sub-menu" id="sub-menu">
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu1" class="checkbox_toggler" onClick="Checked()">
+                    <input type="checkbox" id="sub-menu__drop-menu1" class="checkbox_toggler"  >
                     <label for="sub-menu__drop-menu1">
                       <p class="sub-menu__menu">Notre métier</p>
                       <p class="weight sub-menu__weight">246Ko</p>
@@ -114,7 +112,7 @@
                     </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu2" class="checkbox_toggler" onClick="Checked()">
+                    <input type="checkbox" id="sub-menu__drop-menu2" class="checkbox_toggler"  >
                     <label for="sub-menu__drop-menu2">
                       <p class="sub-menu__menu">Profil</p>
                       <p class="weight sub-menu__weight">176Ko</p>
@@ -131,7 +129,7 @@
                     </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu3" class="checkbox_toggler" onClick="Checked()">
+                    <input type="checkbox" id="sub-menu__drop-menu3" class="checkbox_toggler"  >
                     <label for="sub-menu__drop-menu3">
                       <p class="sub-menu__menu">Faits marquants</p>
                       <p class="weight sub-menu__weight">708Ko</p>
@@ -148,7 +146,7 @@
                     </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu4" class="checkbox_toggler" onClick="Checked()">
+                    <input type="checkbox" id="sub-menu__drop-menu4" class="checkbox_toggler"  >
                     <label for="sub-menu__drop-menu4">
                       <p class="sub-menu__menu">Résultats</p>
                       <p class="weight sub-menu__weight">315Ko</p>
@@ -165,7 +163,7 @@
                     </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu5" class="checkbox_toggler" onClick="Checked()">
+                    <input type="checkbox" id="sub-menu__drop-menu5" class="checkbox_toggler"  >
                     <label for="sub-menu__drop-menu5">
                       <p class="sub-menu__menu">Gouvernance</p>
                       <p class="weight sub-menu__weight">415Ko</p>
@@ -350,4 +348,5 @@
 
       </main>
     </body>
+    <script type="text/javascript" src="assets/js/document.js"></script>
 </html>

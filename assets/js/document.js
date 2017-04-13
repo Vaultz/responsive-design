@@ -1,3 +1,15 @@
+var submenu = document.getElementById('sub-menu');
+var inputs = submenu.getElementsByTagName('input');
+
+document.getElementById('dropdown').addEventListener('click', allChecked);
+
+for (var i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('change', function(e) {
+        Checked();
+    });
+}
+
+
 function Checked(){
 
   var count=0;
