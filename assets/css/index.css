@@ -25,9 +25,6 @@ header {
     max-height: 30px;
     max-width: 300px;
     align-self: center; }
-  header button {
-    background: none;
-    border: none; }
   header div {
     align-self: center; }
     header div :first-child {
@@ -128,7 +125,8 @@ main {
   width: 43px; }
 
 #basicfooter {
-  color: lightgrey;
+  color: white;
+  opacity: .5;
   justify-content: space-between;
   align-items: flex-end;
   margin-top: -90px; }
@@ -149,7 +147,7 @@ main {
   margin: 0; }
 .middlepart a {
   text-decoration: none;
-  color: grey; }
+  color: white; }
 
 .rightpart {
   margin: 9px; }
@@ -203,6 +201,11 @@ main {
 
   #basicfooter {
     display: flex; } }
+button {
+  background: none;
+  border: none;
+  cursor: pointer; }
+
 @media screen and (min-width: 901px) {
   main section .polygonbox svg {
     transform: rotate(0); }
@@ -218,7 +221,8 @@ main {
     display: none; } }
 @media screen and (min-width: 901px) and (max-width: 1200px) {
   .polygonbox {
-    max-width: 90%; }
+    max-width: 90%;
+    margin-top: 30px; }
 
   .polygons {
     width: 26%; } }

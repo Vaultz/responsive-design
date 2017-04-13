@@ -43,11 +43,6 @@ header {
     align-self: center;
   }
 
-  button {
-    background:none;
-    border:none;
-  }
-
   div {
     align-self: center;
     :first-child {
@@ -225,7 +220,8 @@ main {
 }
 
 #basicfooter {
-  color: lightgrey;
+  color:white;
+  opacity: .5;
   // display-flex is triggered by media query
   justify-content: space-between;
   align-items: flex-end;
@@ -259,7 +255,7 @@ main {
 
   a {
     text-decoration: none;
-    color:grey;
+    color:white;
   }
 }
 
@@ -340,6 +336,13 @@ main {
   }
 }
 
+button {
+  background:none;
+  border:none;
+  cursor: pointer;
+}
+
+
 // on large and XL screens
 @media screen and (min-width : 901px) {
   main section .polygonbox svg {
@@ -363,6 +366,7 @@ main {
 
   .polygonbox {
     max-width: 90%;
+    margin-top: 30px;
   }
   .polygons {
     width: 26%;
