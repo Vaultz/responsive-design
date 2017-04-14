@@ -1,0 +1,171 @@
+//  bonne pratique : ne faire que des media queries min-width : on part du mobile, qui est le style de base, et on l'overrride au fur et à mesure des largeurs d'écran
+@media screen and (max-width : 600px) {
+    main {
+        background: url("../images/image_home_mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+    .hide_on_mobile {
+        display: none;
+    }
+
+    .hide_on_desktop {
+        display: flex;
+    }
+
+    .polygonbox {
+        justify-content: center;
+    }
+
+    footer {
+        width:auto;
+        .leftpart {
+            background-color:#000;
+            padding:10px;
+            img {
+                width:25px;
+            }
+        }
+        p, .middlepart, .rightpart {
+
+            display:none;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    header {
+
+        #burgerbutton {
+            display:block;
+            max-height: 30px;
+            max-width: 300px;
+            align-self: center;
+
+        }
+
+        div {
+
+            :first-child {
+                display:block;
+            }
+        }
+    }
+
+    #headband p {
+        font-size:20px;
+    }
+
+    main {
+        section {
+            nav {
+                display:block;
+                ul {
+                    margin: 0;
+                    list-style-type: none;
+                    color: #FFF;
+                    margin-left: 4vw;
+                    font-weight: bold;
+                    font-size: 41px;
+                }
+
+            }
+        }
+    }
+}
+
+
+// On small and medium screens
+@media screen and (max-width: 900px) {
+    .hide_on_mobile_and_tablets {
+        display: none;
+    }
+
+    .polygonbox {
+        max-width: 57vh; // justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .polygons {
+        max-width: 300px;
+    }
+}
+// On medium and large screens
+@media screen and (min-width : 601px) {
+    header {
+        img {
+            margin-left: 26px;
+        }
+    }
+
+    main {
+        background: url("../images/image_home_large.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #basicfooter {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+// on large and XL screens
+@media screen and (min-width : 901px) {
+        main section .polygonbox svg {
+        transform: rotate(0);
+    }
+
+    .polygonbox {
+        margin-top: 3vw;
+    }
+
+    .polygons {
+        transform: translate(0%, 0%)!important;
+    }
+
+    .hide_on_mobile_and_tablets {
+        display: flex;
+        transform: translate(50%, -25%)!important;
+    }
+
+    .polygon2 {
+        display: none;
+    }
+}
+
+// on large screens only
+@media screen and (min-width : 901px) and (max-width : 1200px) {
+    .polygonbox {
+        max-width: 90%;
+        justify-content: center;
+    }
+
+    .polygons {
+        width: 26%; // max-width: 228px;
+    }
+}
+
+// on all screens exept XL
+@media screen and (max-width: 1200px) {
+    .polygonbox {
+        // margin-left: auto;
+        // margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .polygonbox {
+        max-width: 808px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .polygons {
+        max-width: 243px;
+    }
+}

@@ -1,396 +1,282 @@
 // sass --watch assets/scss/index.scss:assets/css/index.css
+// https://specificity.keegan.st/
 
 $headbandHeight: 8vh;
 $headerHeight: 6vh;
 
-body {
-  font-family: arial;
-  margin:0;
-
-  #headband {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #103084;
-    color:white;
-    height: $headbandHeight;
-    padding-left: 15px;
-    padding-right: 15px;
-    // max-height: 55px; PB : causes a blank bottom margin
-
-    p {
-      margin:0;
-    }
-
-    img {
-      border: solid #284591;
-      border-radius: 50%;
-      padding: 7px;
-    }
-  }
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
+
+body {
+    font-family: arial;
+    margin: 0;
+
+}
+
+#headband {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #103084;
+        color: white;
+        height: $headbandHeight;
+        padding-left: 15px;
+        padding-right: 15px; // max-height: 55px; PB : causes a blank bottom margin
+
+        p {
+            margin: 0;
+            font-size: 9px;
+        }
+
+        img {
+            border: solid #284591;
+            border-radius: 50%;
+            padding: 7px;
+        }
+    }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  height: $headerHeight;
+    display: flex;
+    justify-content: space-between;
+    height: $headerHeight;
 
-
-
-  img {
-    max-height: 30px;
-    max-width: 300px;
-    align-self: center;
-  }
-
-  div {
-    align-self: center;
-    :first-child {
-      white-space:pre-line;
+    #burgerbutton {
+        display:none;
     }
 
-    .year {
-      font-size: 35px;
-      font-weight: bold;
+    div {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+
+        :first-child {
+            display:none;
+        }
+
+        .year {
+            font-size: 35px;
+            font-weight: bold;
+        }
     }
-  }
 }
 
-
 main {
+    // background-url fixed in meadia query
+    // width: 100vw;
+    height: calc(100vh - ( #{$headbandHeight} + #{$headerHeight} ) );
 
-  // background-url fixed in meadia query
-  // width: 100vw;
-  height: calc(100vh - ( #{$headbandHeight} + #{$headerHeight} ) );
+    section {
+        nav {
 
-  section {
-    nav {
-      ul {
-        margin:0;
-        list-style-type: none;
-        color:#FFF;
-        margin-left: 4vw;
-        font-weight: bold;
-        font-size: 41px;
-      }
+            display:none;
+            ul {
+                margin: 0;
+                list-style-type: none;
+                color: #FFF;
+                margin-left: 4vw;
+                font-weight: bold;
+                font-size: 41px;
+            }
+        }
+
+        .polygonbox {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+
+        .polygon1 {
+            transform: translate(0%, 9%);
+
+            &:hover path {
+                fill-opacity: 1;
+                fill: #f4887e;
+            }
+        }
+
+        .polygon2 {
+            transform: translate(-14%, 52%);
+
+            &:hover path {
+                fill-opacity: 1;
+                fill: #98c67f;
+            }
+        }
+
+        .polygon3 {
+            transform: translate(0%, -5%);
+
+            &:hover path {
+                fill-opacity: 1;
+                fill: #5a8fa6;
+            }
+        }
+
+        .polygon4 {
+            transform: translate(-14%, 38%);
+
+            &:hover path {
+                fill-opacity: 1;
+                fill: #fcc04b;
+            }
+        }
+
+        .polygon5 {
+            &:hover path {
+                fill-opacity: 1;
+                fill: #a69d57;
+            }
+        }
+
+        .polygon6 {
+            &:hover path {
+                fill-opacity: 1;
+                fill: #98c67f;
+            }
+        }
+
+        .polygon7 {
+            &:hover path {
+                fill-opacity: 1;
+                fill: #e79655;
+            }
+        }
     }
-
-
-    .polygonbox {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-
-      svg {
-        transform: rotate(90deg);
-      }
-    }
-
-
-    .polygon1 {
-      transform: translate(0%, 9%);
-
-
-      &:hover path {
-        fill-opacity:1;
-        fill: #f4887e;
-      }
-
-    }
-
-    .polygon2 {
-      transform: translate(-14%, 52%);
-
-      &:hover path {
-        fill-opacity:1;
-        fill: #98c67f;
-      }
-    }
-
-    .polygon3 {
-      transform: translate(0%, -5%);
-
-      &:hover path {
-        fill-opacity:1;
-        fill: #5a8fa6;
-      }
-    }
-
-    .polygon4 {
-      transform: translate(-14%, 38%);
-
-      &:hover path {
-        fill-opacity:1;
-        fill: #fcc04b;
-      }
-    }
-
-    .polygon5 {
-
-      &:hover path {
-        fill-opacity:1;
-        fill: #a69d57;
-      }
-    }
-
-
-    .polygon6 {
-
-      &:hover path {
-        fill-opacity:1;
-        fill: #98c67f;
-      }
-    }
-
-
-    .polygon7 {
-
-      &:hover path {
-        fill-opacity:1;
-        fill: #e79655;
-      }
-    }
-
-
-
-  }
 }
 
 .polygons {
-    z-index:1;
+    z-index: 1;
     width: 42%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-
-
-
     div {
-      position:absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin-top: 10px;
-      text-decoration: none;
-      color:white;
-      font-weight: bold;
-      width: 70%;
-      z-index: 1;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        width: 70%;
+        z-index: 1;
 
         img {
-          width: 20px;
-          // display:none;
-          align-self: center;
-          visibility: hidden;
-          opacity: 0;
-          transition: visibility 0s, opacity 0.2s linear;
+            width: 20px; // display:none;
+            align-self: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.2s linear;
         }
     }
 
     &:hover img {
-      // display:block;
-      visibility: visible;
-      opacity: 1;
+        // display:block;
+        visibility: visible;
+        opacity: 1;
     }
 
     path {
-      stroke:rgb(255, 255, 255);
-      stroke-width:2.031px;
-      stroke-linecap:butt;
-      stroke-linejoin:miter;
-      fill-opacity:0.251;
-      fill:rgb(41, 41, 41);
-      transition:.3s;
-
+        stroke: rgb(255, 255, 255);
+        stroke-width: 2.031px;
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        fill-opacity: 0.251;
+        fill: rgb(41, 41, 41);
+        transition: 0.3s;
     }
-  }
+}
 
 .hide_on_desktop {
-  display:none;
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 #mobilefooter {
-  background-color: black;
-  margin-top: -37px;
-  width: 43px;
+    background-color: black;
+    width: 43px;
 }
 
 #basicfooter {
-  color:white;
-  opacity: .5;
-  // display-flex is triggered by media query
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: -90px;
+    color: white;
+}
+
+.middlepart, .rightpart {
+    opacity: 0.6;
 }
 
 .leftpart {
-  background-color: #232321;
-  padding: 15px;
+    background-color: #232321;
+    padding: 15px;
 
-  img {
-    width:18px
-  }
+    img {
+        width: 18px;
+    }
 
-  & :nth-child(2) {
-    color:grey;
-  }
+    &:nth-child(2) {
+        color: grey;
+    }
 
-  p {
-    margin:0;
-    text-align:center;
-  }
+    p {
+        margin: 0;
+        text-align: center;
+    }
 }
 
 .middlepart {
+    p {
+        align-self: center;
+        margin: 0;
+    }
 
-  p {
-    align-self: center;
-    margin:0;
-  }
-
-  a {
-    text-decoration: none;
-    color:white;
-  }
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .rightpart {
-  margin: 9px;
-  p {
-    margin-bottom: 8px;
-  }
+    margin: 9px;
 
-  .socialmedia_icons {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-
-    img {
-      opacity:.6;
+    p {
+        margin-bottom: 8px;
     }
-  }
 
+    .socialmedia_icons {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+
+        img {
+            opacity: 0.6;
+        }
+    }
 }
 
 .icons {
-  color:white;
-  text-decoration:none;
+    color: white;
+    text-decoration: none;
 }
 
 .icons::after {
-  content:" | ";
-  white-space: pre-wrap;
-  color:darkgrey;
-}
-
-@media screen and (max-width : 600px) {
-  main {
-    background: url(../images/image_home_mobile.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .hide_on_mobile {
-    display:none;
-  }
-  .hide_on_desktop {
-    display:flex;
-  }
-}
-
-// On small and medium screens
-@media screen and (max-width: 900px) {
-  .hide_on_mobile_and_tablets {
-    display:none;
-  }
-  .polygonbox {
-    max-width: 57vh;
-    justify-content: center;
-  }
-  .polygons {
-    max-width: 300px;
-  }
-}
-
-// On medium and large screens
-@media screen and (min-width : 601px) {
-  header {
-    img {
-      margin-left: 26px;
-    }
-  }
-  main {
-    background: url(../images/image_home_large.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-
-  }
-
-  #basicfooter {
-    display:flex;
-  }
-}
-
-button {
-  background:none;
-  border:none;
-  cursor: pointer;
-}
-
-
-// on large and XL screens
-@media screen and (min-width : 901px) {
-  main section .polygonbox svg {
-    transform: rotate(0);
-  }
-
-  .polygons {
-    transform: translate(0%, 0%)!important;
-  }
-  .hide_on_mobile_and_tablets {
-    display:flex;
-    transform: translate(50%, -25%)!important;
-  }
-  .polygon2 {
-    display:none;
-  }
-}
-
-// on large screens only
-@media screen and (min-width : 901px) and (max-width : 1200px) {
-
-  .polygonbox {
-    max-width: 90%;
-    margin-top: 30px;
-  }
-  .polygons {
-    width: 26%;
-    // max-width: 228px;
-  }
-
-}
-
-// on all screens exept XL
-@media screen and (max-width: 1200px) {
-  .polygonbox {
-    margin-left: auto;
-    margin-right: auto;
-
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .polygonbox {
-    max-width: 808px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .polygons {
-    max-width: 243px;
-  }
+    content: " | ";
+    white-space: pre-wrap;
+    color: darkgrey;
 }
