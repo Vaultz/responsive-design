@@ -15,7 +15,7 @@
           <img src="assets/images/burger_menu.png" alt="Menu burger">
         </button>
 
-        <img src="assets/images/logo_axa.jpg" alt="Logo AXA">
+        <a href="index.html"><img src="assets/images/logo_axa.jpg" alt="Logo AXA"></a>
         <div>
           <span class="show_on_desktop">regards sur
           </span>
@@ -34,7 +34,7 @@
 
             <ul class="drop-menu">
               <li>
-                <input type="checkbox" id="drop-menu1" class="checkbox_toggler">
+                <input type="checkbox" id="drop-menu1" class="checkbox_toggler" data-size="1200">
                 <label for="drop-menu1">
                   <span class="chevron"></span>
                   <p class="menu">Cahier "protéger ce qui nous est essentiel"</p>
@@ -48,56 +48,41 @@
                       <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                        d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                     </svg>
-                  <span>
+                  </span>
                 </label>
               </li>
 
-              <li>
-                <input type="checkbox" id="drop-menu2" class="checkbox_toggler">
+
+
+
+
+              <li class="liDropDown">
+                <!-- input type="checkbox" id="drop-menu2" class="checkbox_toggler"-->
                 <label for="drop-menu2">
-                  <span class="chevron"></span>
+                  <span class="chevron chevron-down" id="chevron"></span>
                   <p class="menu">Entretien avec Henri de Castries</p>
                   <p class="weight">950Ko</p>
-                  <span class="select">
-                    <svg class="polygone" width="33px" height="40px">
+                  <span class="select select-drop-down">
+                    <svg class="polygone-drop-down" width="33px" height="40px">
                         <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
                        d="M30.998,28.896 L16.017,37.912 L1.019,28.927 L1.002,10.924 L15.983,1.908 L30.981,10.894 L30.998,28.896 Z"/>
                     </svg>
-                    <svg class="arrow" width="21px" height="15px">
-                      <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
-                       d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
-                    </svg>
-                  <span>
-                </label>
-              </li>
-
-              <li>
-                <input type="checkbox" id="drop-menu3" class="checkbox_toggler">
-                <label for="drop-menu3">
-                  <span class="chevron chevron-down"></span>
-                  <p class="menu">Notre groupe</p>
-                  <p class="weight">1,6Mo</p>
-                  <span class="select" id="dropdown">
-                    <svg id="polygone-drop-down" class="polygone-drop-down" width="33px" height="40px">
-                        <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
-                       d="M30.998,28.896 L16.017,37.912 L1.019,28.927 L1.002,10.924 L15.983,1.908 L30.981,10.894 L30.998,28.896 Z"/>
-                    </svg>
-                    <svg id="bar-drop-down" class="bar" width="14px" height="4px">
+                    <svg class="bar" width="14px" height="4px">
                       <path fill-rule="evenodd"  opacity="0.349" fill="rgb(231, 150, 85)"
                      d="M0.000,0.928 L14.000,0.928 L14.000,3.928 L0.000,3.928 L0.000,0.928 Z"/>
                     </svg>
-                    <svg id="arrow-drop-down" class="arrow-drop-down" width="21px" height="15px">
+                    <svg class="arrow-drop-down" width="21px" height="15px">
                       <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                        d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                     </svg>
-                  <span>
+                  </span>
                 </label>
-                <ul class="sub-menu" id="sub-menu">
+                <ul class="sub-menu" id="sub-menu2">
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu1" class="checkbox_toggler"  >
-                    <label for="sub-menu__drop-menu1">
+                    <input type="checkbox" id="sub-menu2__drop-menu1" class="checkbox_toggler" data-size="500">
+                    <label for="sub-menu2__drop-menu1">
                       <p class="sub-menu__menu">Notre métier</p>
-                      <p class="weight sub-menu__weight">246Ko</p>
+                      <p class="weight sub-menu__weight">500Ko</p>
                       <span class="select">
                         <svg class="polygone" width="19.5px" height="23.5px">
                           <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -107,65 +92,14 @@
                           <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                            d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
                         </svg>
-                      <span>
+                      </span>
                     </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="sub-menu__drop-menu2" class="checkbox_toggler"  >
-                    <label for="sub-menu__drop-menu2">
+                    <input type="checkbox" id="sub-menu2__drop-menu2" class="checkbox_toggler"  data-size="450">
+                    <label for="sub-menu2__drop-menu2">
                       <p class="sub-menu__menu">Profil</p>
-                      <p class="weight sub-menu__weight">176Ko</p>
-                      <span class="select">
-                        <svg class="polygone" width="19.5px" height="23.5px">
-                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
-                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
-                        </svg>
-                        <svg class="arrow sub-menu__arrow" width="10px" height="7px">
-                          <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
-                           d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
-                        </svg>
-                      <span>
-                    </label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="sub-menu__drop-menu3" class="checkbox_toggler"  >
-                    <label for="sub-menu__drop-menu3">
-                      <p class="sub-menu__menu">Faits marquants</p>
-                      <p class="weight sub-menu__weight">708Ko</p>
-                      <span class="select">
-                        <svg class="polygone" width="19.5px" height="23.5px">
-                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
-                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
-                        </svg>
-                        <svg class="arrow sub-menu__arrow" width="10px" height="7px">
-                          <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
-                           d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
-                        </svg>
-                      <span>
-                    </label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="sub-menu__drop-menu4" class="checkbox_toggler"  >
-                    <label for="sub-menu__drop-menu4">
-                      <p class="sub-menu__menu">Résultats</p>
-                      <p class="weight sub-menu__weight">315Ko</p>
-                      <span class="select">
-                        <svg class="polygone" width="19.5px" height="23.5px">
-                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
-                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
-                        </svg>
-                        <svg class="arrow sub-menu__arrow" width="10px" height="7px">
-                          <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
-                           d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
-                        </svg>
-                      <span>
-                    </label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="sub-menu__drop-menu5" class="checkbox_toggler"  >
-                    <label for="sub-menu__drop-menu5">
-                      <p class="sub-menu__menu">Gouvernance</p>
-                      <p class="weight sub-menu__weight">415Ko</p>
+                      <p class="weight sub-menu__weight">450Ko</p>
                       <span class="select">
                         <svg class="polygone" width="19.5px" height="23.5px">
                           <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -181,8 +115,117 @@
                 </ul>
               </li>
 
+              <li class="liDropDown">
+                <label for="drop-menu3">
+                  <span class="chevron chevron-down" id="chevron"></span>
+                  <p class="menu">Notre groupe</p>
+                  <p class="weight">1,6Mo</p>
+                  <span class="select select-drop-down">
+                    <svg class="polygone-drop-down" width="33px" height="40px">
+                        <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                       d="M30.998,28.896 L16.017,37.912 L1.019,28.927 L1.002,10.924 L15.983,1.908 L30.981,10.894 L30.998,28.896 Z"/>
+                    </svg>
+                    <svg class="bar" width="14px" height="4px">
+                      <path fill-rule="evenodd"  opacity="0.349" fill="rgb(231, 150, 85)"
+                     d="M0.000,0.928 L14.000,0.928 L14.000,3.928 L0.000,3.928 L0.000,0.928 Z"/>
+                    </svg>
+                    <svg class="arrow-drop-down" width="21px" height="15px">
+                      <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                       d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
+                    </svg>
+                  </span>
+                </label>
+                <ul class="sub-menu" id="sub-menu3">
+                  <li>
+                    <input type="checkbox" id="sub-menu3__drop-menu1" class="checkbox_toggler" data-size="246">
+                    <label for="sub-menu3__drop-menu1">
+                      <p class="sub-menu__menu">Notre métier</p>
+                      <p class="weight sub-menu__weight">246Ko</p>
+                      <span class="select">
+                        <svg class="polygone" width="19.5px" height="23.5px">
+                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                        </svg>
+                        <svg class="arrow sub-menu__arrow" width="10px" height="7px">
+                          <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                           d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                        </svg>
+                      </span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="sub-menu3__drop-menu2" class="checkbox_toggler" data-size="176">
+                    <label for="sub-menu3__drop-menu2">
+                      <p class="sub-menu__menu">Profil</p>
+                      <p class="weight sub-menu__weight">176Ko</p>
+                      <span class="select">
+                        <svg class="polygone" width="19.5px" height="23.5px">
+                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                        </svg>
+                        <svg class="arrow sub-menu__arrow" width="10px" height="7px">
+                          <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                           d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                        </svg>
+                      <span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="sub-menu3__drop-menu3" class="checkbox_toggler" data-size="708" >
+                    <label for="sub-menu3__drop-menu3">
+                      <p class="sub-menu__menu">Faits marquants</p>
+                      <p class="weight sub-menu__weight">708Ko</p>
+                      <span class="select">
+                        <svg class="polygone" width="19.5px" height="23.5px">
+                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                        </svg>
+                        <svg class="arrow sub-menu__arrow" width="10px" height="7px">
+                          <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                           d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                        </svg>
+                      <span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="sub-menu3__drop-menu4" class="checkbox_toggler"  data-size="315">
+                    <label for="sub-menu3__drop-menu4">
+                      <p class="sub-menu__menu">Résultats</p>
+                      <p class="weight sub-menu__weight">315Ko</p>
+                      <span class="select">
+                        <svg class="polygone" width="19.5px" height="23.5px">
+                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                        </svg>
+                        <svg class="arrow sub-menu__arrow" width="10px" height="7px">
+                          <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                           d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                        </svg>
+                      <span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="sub-menu3__drop-menu5" class="checkbox_toggler"  data-size="415">
+                    <label for="sub-menu3__drop-menu5">
+                      <p class="sub-menu__menu">Gouvernance</p>
+                      <p class="weight sub-menu__weight">415Ko</p>
+                      <span class="select">
+                        <svg class="polygone" width="19.5px" height="23.5px">
+                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                        </svg>
+                        <svg class="arrow sub-menu__arrow" width="10px" height="7px">
+                          <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                           d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                        </svg>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </li>
+
               <li>
-                <input type="checkbox" id="drop-menu4" class="checkbox_toggler">
+                <input type="checkbox" id="drop-menu4" class="checkbox_toggler" data-size="2100">
                 <label for="drop-menu4">
                   <span class="chevron"></span>
                   <p class="menu">Notre stratégie</p>
@@ -201,7 +244,7 @@
               </li>
 
               <li>
-                <input type="checkbox" id="drop-menu5" class="checkbox_toggler">
+                <input type="checkbox" id="drop-menu5" class="checkbox_toggler" data-size="3400">
                 <label for="drop-menu5">
                   <span class="chevron"></span>
                   <p class="menu">nos Activités</p>
@@ -215,12 +258,12 @@
                       <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                        d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                     </svg>
-                  <span>
+                  </span>
                 </label>
 
               </li>
               <li>
-                <input type="checkbox" id="drop-menu6" class="checkbox_toggler">
+                <input type="checkbox" id="drop-menu6" class="checkbox_toggler" data-size="2300">
                 <label for="drop-menu6">
                   <span class="chevron"></span>
                   <p class="menu">notre responsabilité d'entreprise</p>
@@ -234,7 +277,7 @@
                       <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                        d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                     </svg>
-                  <span>
+                  </span>
                 </label>
               </li>
             </ul>
@@ -244,7 +287,7 @@
             <svg width="30px" height="36px">
               <image  x="0px" y="0px" width="30px" height="36px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAkCAMAAACpD3pbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA+VBMVEXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllXnllX///+SDkBYAAAAUXRSTlMAJLaxIgmC+PZ/Tt/+nqLcTLTOOj3RsyOA720Ebt2gFxihIbLQPM9+b4FK26MZ3k/SPjuSY3DK1+36YooCr0DUTaRH8XwGsB/wcQjTP0ulfSD92fH0AAAAAWJLR0RSDWAtkAAAAAd0SU1FB+EEDAocKQfIOxgAAAE9SURBVDjL3ZPpVsIwEIVTAa0YpUWxQG2RAqLUKhXKjvuK633/lzEBpG1IX8D7K3O+nNyZkzuERKVspNIkSZnNLUDdzshpdgd0d48ip0mgogP5fUIOCsChIb5bVFEqm/xoHpWgFmMOmgVqV/6q4yqFlV1BpwbUG9HrjRNAVxbvNtm7p2bczCwzhzPm0HJBz731Vis2xcUlAdq+fNCrPMCwSRJkznFYd8DUCWsB2xzb/w53gx7HvaArxX0s1ZdiY7CgA0Pu7Q85Hfpyb0JGHI8SOydjYEwEHPnQyXQ6ET80HrNQ1zcM37KQViVh8u4o3PtlxNeiGDxAfXyan9MsyIVY4Pw28PyyKrVcNK4eWzS3Fb3Ow/76Fi5Rcya04qSA9w8W3zpQcySDfLKF+GLhtzT5oLNvFeJyxvQz1eOr/Qvgc1EBQ9xScQAAAABJRU5ErkJggg==" />
             </svg>
-            <p><strong>Télécharger</strong></p> <p>6,2Mo</p>
+            <p><strong>Télécharger</strong></p> <p id="size_total"></p>
           </button>
         </section>
 
