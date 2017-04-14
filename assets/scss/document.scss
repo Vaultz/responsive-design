@@ -20,6 +20,46 @@ h2{
   border-bottom: solid 1px rgb(231, 150, 85);
   font-size: 16px;
 }
+
+//HEADER
+$headerHeight: 6vh;
+header {
+  display: flex;
+  justify-content: space-between;
+  height: $headerHeight;
+  background-color: white;
+
+  a{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  a img {
+    max-height: 30px;
+    max-width: 300px;
+    align-self: center;
+  }
+
+  button {
+    background:none;
+    border:none;
+  }
+
+  div {
+    align-self: center;
+    :first-child {
+      white-space:pre-line;
+    }
+
+    .year {
+      font-size: 35px;
+      font-weight: bold;
+      color: rgb(231, 150, 85);
+    }
+  }
+}
+
+
 //*********//
 //SECTION 1//
 //*********//
@@ -128,6 +168,7 @@ h2{
 
   .checkbox_toggler:checked ~ label .chevron-down {
   	transform: rotate(90deg);
+    transform-origin: 80% 50%;
   }
   .checkbox_toggler:checked ~ label .arrow {
     display: block;
@@ -172,6 +213,7 @@ h2{
     margin-bottom: 0;
   }
 }
+
 //CHEVRON
 .chevron{
   padding-left: 10px;
@@ -186,7 +228,6 @@ h2{
 	left: 0.15em;
 	position: relative;
 	top: 0.15em;
-	transform: rotate(-45deg);
 	vertical-align: top;
 	width: 0.45em;
   left: 0;
@@ -198,7 +239,15 @@ h2{
 	transform: rotate(135deg);
 }
 
+.arrow-down{
+  transform: rotate(90deg);
+  transform-origin: 80% 50%;
+}
 
+
+//*********//
+//SECTION 2//
+//*********//
 .subcategory__2 {
     .ad{
       display: flex;
@@ -233,6 +282,9 @@ h2{
     }
 }
 
+//*********//
+//SECTION 3//
+//*********//
 .subcategory__3{
     .drop-menu__content{
       //margin-right: 10px;
@@ -257,37 +309,15 @@ button, label{
   cursor: pointer
 }
 
-$headerHeight: 6vh;
 
-header {
-  display: flex;
-  justify-content: space-between;
-  height: $headerHeight;
-  background-color: white;
 
-  img {
-    max-height: 30px;
-    max-width: 300px;
-    align-self: center;
-  }
 
-  button {
-    background:none;
-    border:none;
-  }
 
-  div {
-    align-self: center;
-    :first-child {
-      white-space:pre-line;
-    }
 
-    .year {
-      font-size: 35px;
-      font-weight: bold;
-    }
-  }
-}
+
+
+
+
 
 @media screen and (max-width : 600px) {
   .show_on_mobile {
@@ -296,6 +326,11 @@ header {
   .show_on_desktop{
     display:none;
   }
+  header{
+      div{
+        margin-right: 5px;
+      }
+  }
 }
 @media screen and (min-width : 600px) {
   .show_on_mobile {
@@ -303,6 +338,14 @@ header {
   }
   .show_on_desktop{
     display:block;
+  }
+  header{
+    img {
+        margin-left: 10px;
+      }
+      div{
+        margin: 5px;
+      }
   }
 }
 @media screen and (max-width : 700px) {
