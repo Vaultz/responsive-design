@@ -3,8 +3,3 @@ document.getElementById('closing_cross').addEventListener("click", function remo
   document.getElementById('headband').parentNode.removeChild(document.getElementById("headband"));
   document.getElementById('main').style.height = ('94vh');
 });
-
-// var clientWidth = document.documentElement.clientWidth;
-// if (clientWidth > 600) {
-//   document.getElementById('burgerbutton').parentNode.removeChild(document.getElementById('burgerbutton'));
-// }

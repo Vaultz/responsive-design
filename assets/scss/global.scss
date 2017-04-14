@@ -2,3 +2,45 @@
 @import 'index';
 @import 'document';
 @import 'mediaqueries';
+
+
+$headerHeight: 60px;
+header {
+  display: flex;
+  justify-content: space-between;
+  height: $headerHeight;
+  background-color: white;
+
+  a{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  a img {
+    max-height: 30px;
+    max-width: 300px;
+    align-self: center;
+  }
+
+  button {
+    background:none;
+    border:none;
+  }
+
+  div {
+    align-self: center;
+    :first-child {
+      white-space:pre-line;
+    }
+
+    .year {
+        font-size: 35px;
+        font-weight: bold;
+
+    }
+
+    #orangeyear {
+      color: rgb(231, 150, 85);
+    }
+  }
+}
